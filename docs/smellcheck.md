@@ -39,4 +39,5 @@ when you are saying what this skill is not.
 The name is CraftAssay. You may say what an assay is in ordinary
 language: a test of what something is made of, and how good it is.
 Do not split the name into two bold words. Do not tell the reader
-they can skip a word. Budget: two assay mentions on a landing page.
+they can skip a word. Do not lecture them on how to capitalize it.
+Budget: two assay mentions on a landing page.

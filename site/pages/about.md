@@ -8,7 +8,7 @@ An assay is a test of composition and quality. You take a sample, you measure wh
 
 CraftAssay is that kind of review: findings, scores, evidence, and a way to compare versions.
 
-Use the exact capitalization **CraftAssay**. The report is an assessment, not a certification and not a guarantee of reliability.
+The report is an assessment, not a certification and not a guarantee of reliability.
 
 The skill does not edit the source. Implementing the findings is a later, separate request.
 

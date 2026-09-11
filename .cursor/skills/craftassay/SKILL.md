@@ -16,11 +16,11 @@ can use what is presented as ready. Do not run Cold-eye's job here.
 You may recommend a Cold-eye pass, or import a supplied Cold-eye
 review as a source. Preserve its version, scope, date, and evidence.
 
-Use the exact name **CraftAssay**. Familiar labels: Review,
-Findings, Scores, Evidence, Compare versions. An assay is a test
-of composition and quality. Use that sense when it earns its keep.
-Do not split the product name. Do not tell the reader they can
-skip a word in it.
+Familiar labels: Review, Findings, Scores, Evidence, Compare
+versions. An assay is a test of composition and quality. Use that
+sense when it earns its keep. Do not split the product name. Do
+not tell the reader they can skip a word in it. Do not lecture
+them on how to capitalize it.
 
 The contract is Review and Comparison Specification v1.1, scoring
 rubric v1.0. If a full spec file is in the repo

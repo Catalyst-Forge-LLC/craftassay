@@ -61,7 +61,8 @@ test("public copy names the product and the landing example", () => {
 	const about = readFileSync(join(packageRoot, "site", "pages", "about.md"), "utf8");
 	assert.match(home, /An assay tests what something is made of/);
 	assert.match(about, /An assay is a test of composition and quality/);
-	assert.match(about, /\*\*CraftAssay\*\*/);
+	assert.match(about, /CraftAssay/);
+	assert.doesNotMatch(about, /capitalization/);
 	assert.doesNotMatch(about, /second word/);
 	assert.doesNotMatch(about, /\*\*Assay\*\*/);
 	assert.match(about, /craftassay\.dev/);

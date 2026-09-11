@@ -9,7 +9,6 @@ An installable review skill for AI agents.
 An assay tests what something is made of, and how good it is.
 CraftAssay does that for a tool, a site, or a page. It writes
 findings and scores that can be compared across revisions.
-Written **CraftAssay**.
 npm **`craftassay`**.
 
 The report is an assessment, not a certification.
