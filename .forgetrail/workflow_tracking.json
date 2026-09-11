@@ -1,0 +1,230 @@
+{
+  "project": {
+    "name": "CraftAssay",
+    "created": "2026-09-11",
+    "description": "Evidence-backed reviews of usefulness, clarity, quality, and presentation. Agent skill plus FilePress site. Spec v1.1, rubric v1.0. Sibling of Smell Check, Detangler, Misemphasis, and Cold-eye.",
+    "archetype": "product",
+    "status": "active"
+  },
+  "agentContext": {
+    "primaryAgent": "cursor-agent",
+    "supportsSubagents": true,
+    "supportsPlanMode": true
+  },
+  "currentPhase": "1-architecture",
+  "phases": {
+    "1-architecture": {
+      "status": "in_progress",
+      "startedAt": "2026-09-11T15:30:00",
+      "completedAt": null,
+      "exitCriteriaMet": [],
+      "exitCriteriaRemaining": [
+        "Tech choices confirmed",
+        "Folder structure confirmed",
+        "Data model shape confirmed",
+        "First feature batch defined",
+        "Claude's understanding verified by user",
+        "PHASE_1_BRIEF.md created, complete, and locked (docs/)",
+        "Major decisions recorded in workflow_tracking.json decisions[]"
+      ],
+      "notes": [
+        {
+          "timestamp": "2026-09-11T15:30:00",
+          "text": "Greenfield kickoff. Canonical review contract is craftassay-review-spec-v1.1.md. Delivery modeled on Smell Check, Detangler, Misemphasis, and Cold-eye: skill + FilePress site + LocalSlip lease + LocalHelm fleet enrollment. No app code until the brief is locked."
+        }
+      ]
+    },
+    "2-scaffolding": {
+      "status": "not_started",
+      "startedAt": null,
+      "completedAt": null,
+      "exitCriteriaMet": [],
+      "exitCriteriaRemaining": [
+        "App runs with pnpm dev",
+        "Real data visible on screen",
+        "Core CRUD works",
+        "Hero flow functions end to end",
+        "CONTEXT_PROMPT.md created and populated by merging PHASE_1_BRIEF.md (then template lessons as needed)",
+        "README.md created (from ForgeTrail template)",
+        "TODO.md created (from ForgeTrail template, seeded from PHASE_1_BRIEF §11)",
+        "IDEAS.md created (from ForgeTrail template)",
+        "Phase 2 doc scope only per WORKFLOW §1a (no premature extra templates)"
+      ],
+      "notes": []
+    },
+    "3-stabilization": {
+      "status": "not_started",
+      "startedAt": null,
+      "completedAt": null,
+      "exitCriteriaMet": [],
+      "exitCriteriaRemaining": [
+        "Environment variables resolve correctly",
+        "APIs return real data",
+        "Core workflow completes without infrastructure errors",
+        "Error messages are human-readable (not just status codes)"
+      ],
+      "notes": []
+    },
+    "4-feature-iteration": {
+      "status": "not_started",
+      "startedAt": null,
+      "completedAt": null,
+      "exitCriteriaMet": [],
+      "exitCriteriaRemaining": [
+        "Core value proposition delivered",
+        "Hero flow works with real data including edge cases",
+        "Features tested beyond happy path"
+      ],
+      "notes": [],
+      "iterations": []
+    },
+    "5-refactoring": {
+      "status": "not_started",
+      "startedAt": null,
+      "completedAt": null,
+      "exitCriteriaMet": [],
+      "exitCriteriaRemaining": [
+        "No file exceeds ~500 lines without justification",
+        "Shared utilities extracted",
+        "No duplicated patterns",
+        "Build passes after each refactor"
+      ],
+      "notes": []
+    },
+    "6-strategic-review": {
+      "status": "not_started",
+      "startedAt": null,
+      "completedAt": null,
+      "exitCriteriaMet": [],
+      "exitCriteriaRemaining": [
+        "BRAND_AND_PRODUCT.md created (from ForgeTrail template)",
+        "TODO reorganized by brand value pillars",
+        "Features mapped to brand pillars",
+        "Gap between brand promise and product identified",
+        "IDEAS.md processed into TODO",
+        "Build order decided"
+      ],
+      "notes": []
+    },
+    "7-hardening": {
+      "status": "not_started",
+      "startedAt": null,
+      "completedAt": null,
+      "exitCriteriaMet": [],
+      "exitCriteriaRemaining": [
+        "CODE_QUALITY.md produced (from ForgeTrail template) and critical findings fixed",
+        "BLACK_HAT_REPORT.md produced (via ForgeTrail security audit) and critical/high findings fixed",
+        "All findings triaged into TODO.md with P0/P1/P2 priority",
+        "All LLM outputs checked against field size limits",
+        "No silent failures in core workflows (grep for empty catch blocks)",
+        "All API routes return errors in consistent format",
+        "All user input validated (centralized Zod schemas recommended)",
+        "No unvalidated as-any casts on critical paths",
+        "DEPLOYMENT.md created (from ForgeTrail template)",
+        "BUSINESS_PLAN.md created if pursuing paid users (from ForgeTrail template)",
+        "TEST_PLAN.md complete or extended (from ForgeTrail template)",
+        "TECHNICAL_REFERENCE.md complete and current",
+        "Auth flow works end to end (if applicable)",
+        "Payment flow works end to end (if applicable)",
+        "Docs alignment audit passed (via ForgeTrail docs-alignment audit)",
+        "All documentation consolidated and cross-referenced"
+      ],
+      "notes": []
+    }
+  },
+  "decisions": [
+    {
+      "id": "d1",
+      "timestamp": "2026-09-11T15:30:00",
+      "phase": "1-architecture",
+      "session": 1,
+      "decision": "Deliver CraftAssay as an agent skill plus FilePress site plus a tiny TypeScript path catalog. No command-line reviewer.",
+      "rationale": "Smell Check, Detangler, Misemphasis, and Cold-eye already prove this shape. The review judgment is host-agent behavior. The spec is the contract. A CLI that called a project-owned model would change the product.",
+      "alternatives_considered": [
+        "CLI that calls a cloud or local LLM",
+        "Hosted review web app with accounts",
+        "Spec-only repo with no site"
+      ],
+      "status": "proposed"
+    },
+    {
+      "id": "d2",
+      "timestamp": "2026-09-11T15:30:00",
+      "phase": "1-architecture",
+      "session": 1,
+      "decision": "craftassay-review-spec-v1.1.md is the review contract. Rubric stays v1.0. Site and skill must not invent extra dimensions, scores, or modes.",
+      "rationale": "The spec already defines inventory, evidence, seven dimensions, findings, comparison, and the invocation prompt. Implementation should encode that contract, not replace it.",
+      "alternatives_considered": [
+        "Rewrite a shorter product spec and treat v1.1 as background",
+        "Add a hosted validator that becomes the source of truth"
+      ],
+      "status": "proposed"
+    },
+    {
+      "id": "d3",
+      "timestamp": "2026-09-11T15:30:00",
+      "phase": "1-architecture",
+      "session": 1,
+      "decision": "Local files only. No PocketBase, no accounts, no project-owned LLM API.",
+      "rationale": "Review inputs and reports live on disk. State does not need to outlive the browser as shared product data. Host agent supplies judgment. Matches sibling review skills.",
+      "alternatives_considered": [
+        "PocketBase plus auth for saved reviews",
+        "Runtime LLM API for automated scoring"
+      ],
+      "status": "proposed"
+    },
+    {
+      "id": "d4",
+      "timestamp": "2026-09-11T15:30:00",
+      "phase": "1-architecture",
+      "session": 1,
+      "decision": "TypeScript ESM, Node >=20, pnpm. FilePress site shipped with getfilepress and Cloudflare Pages.",
+      "rationale": "House language and the sibling site stack. User asked for a FilePress site.",
+      "alternatives_considered": [
+        "SvelteKit app with PocketBase",
+        "Static site without FilePress"
+      ],
+      "status": "proposed"
+    },
+    {
+      "id": "d5",
+      "timestamp": "2026-09-11T15:30:00",
+      "phase": "1-architecture",
+      "session": 1,
+      "decision": "LocalSlip lease craftassay-site on preferred port 5202. Enroll the repo in the workspace LocalHelm fleet.",
+      "rationale": "House local-dev tools. FilePress reads the lease and does not claim on dev. 5202 is unused in the published FilePress lease table. LocalHelm needs a fleet row plus pnpm ship for Sites and Ship.",
+      "alternatives_considered": [
+        "Hardcode Vite 5173",
+        "Skip fleet enrollment until after first ship"
+      ],
+      "status": "proposed"
+    },
+    {
+      "id": "d6",
+      "timestamp": "2026-09-11T15:30:00",
+      "phase": "1-architecture",
+      "session": 1,
+      "decision": "Keep CraftAssay and Cold-eye as distinct review questions. One skill handles initial review and comparison when a baseline is supplied.",
+      "rationale": "Spec §0 already defines the relationship. A second comparison package would split the contract. Optional Cold-eye pass stays a recommendation, not a dependency.",
+      "alternatives_considered": [
+        "Separate craftassay-compare skill",
+        "Require Cold-eye before a CraftAssay review"
+      ],
+      "status": "proposed"
+    }
+  ],
+  "gotchas": [],
+  "sessions": [
+    {
+      "session": 1,
+      "date": "2026-09-11",
+      "phasesWorked": ["1-architecture"],
+      "accomplished": [
+        "ForgeTrail tracking and Cursor rules written",
+        "Draft PHASE_1_BRIEF from spec v1.1 and sibling FilePress sites"
+      ],
+      "leftOff": "Phase 1 brief is draft. Waiting for lock on domain, npm name, and the proposed sibling-parity stack.",
+      "contextLimitHit": false
+    }
+  ]
+}
