@@ -37,7 +37,7 @@ inspected presentation, not a measured bug rate.
 ## HarborNote (`harbornote.example`)
 
 **User and job:** A person who wants local notes without a cloud.
-**What works and should remain:** The offline line is a clear job.
+**What works and should remain:** Notes that work without a network.
 **Review:** The hero says nothing leaves the machine, then the same
 page sells automatic multi-device sync and a signup URL.
 **Material findings:** harbornote-F001, harbornote-F002, harbornote-F003.

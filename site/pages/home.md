@@ -26,7 +26,7 @@ Accuracy is freedom from misleading claims in the inspected presentation. It is 
 
 The [sample report](/docs/sample-report) uses a fictional notes page. The hero says nothing leaves the machine. The same page sells signup and automatic sync.
 
-Bound the privacy claim. The offline line can stay.
+Bound the privacy claim. Notes can still work without a network.
 
 Name the job, keep what works, and fix the smallest thing that removes the friction.
 
