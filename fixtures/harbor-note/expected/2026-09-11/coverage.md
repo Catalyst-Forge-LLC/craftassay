@@ -1,5 +1,7 @@
 # Coverage — HarborNote
 
+Review date: 2026-09-11.
+
 | Surface | Status | Notes |
 | --- | --- | --- |
 | Catalog card | not applicable | Single-subject fixture |
@@ -12,3 +14,4 @@
 | External comparison | not inspected | Uniqueness is NR |
 
 Coverage limitations: fictional subject, no live host, no rendered UI.
+The whitepaper 404 is stipulated in the fixture text.

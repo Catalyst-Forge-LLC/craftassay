@@ -14,7 +14,7 @@ subject_version: null
 confidence: "high | medium | low"
 consequence: "Why this matters to the intended user"
 priority: "P1 | P2 | P3"
-recommended_change: "Smallest sufficient correction"
+recommended_change: "Smallest useful correction, or a specific next check"
 acceptance_criteria: []
 verification_needed: "Focused next check, if any"
 status: "open | resolved | partially-resolved | unchanged | regressed | not-rechecked | superseded | withdrawn"
@@ -30,8 +30,9 @@ prior_finding_id: null
 - **claim-risk** — wording is broader than the presented evidence
 - **presentation-judgment** — editorial or visual assessment on
   the user's path
-- **verify-first** — an unresolved implementation question. Say
-  what to inspect before prescribing a fix
+- **verify-first** — an unresolved implementation question. Keep
+  it when the next check is specific. Do not drop it for lack of
+  a fix. Drop only vague criticism with no check and no correction.
 
 ## Priority
 

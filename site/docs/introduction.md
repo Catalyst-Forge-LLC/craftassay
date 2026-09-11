@@ -8,7 +8,7 @@ It scores usefulness, clarity, quality, and presentation. It is not a certificat
 
 ## The report comes first
 
-Submit a project, a site, a file, or a paste. The skill writes `report.md` plus a scorecard, findings, and coverage. The skill does not edit the source.
+Submit a project, a site, a file, or a paste. The skill writes a dated run folder with `report.md`, a scorecard, findings, and coverage. The skill does not edit the source.
 
 | Dimension | Asks |
 | --- | --- |
@@ -22,13 +22,14 @@ Submit a project, a site, a file, or a paste. The skill writes `report.md` plus 
 
 Use NR when evidence is missing. Do not invent an aesthetic score for an uninspected interface.
 
-## Not Cold-eye
+## CraftAssay and Cold-eye
 
-[Cold-eye](https://coldeye.dev) checks readiness for a claimed first-use path. CraftAssay can recommend that pass. It does not require it. A clean Cold-eye review does not mean CraftAssay will score the work highly.
+[Cold-eye](https://coldeye.dev) checks readiness for a claimed first-use path. CraftAssay still reports first-use friction when it affects its scores. It does not issue a release-readiness verdict. A clean Cold-eye review does not mean CraftAssay will score the work highly.
 
 ## Start here
 
 - [Install](/docs/install) — download the zip
 - [Skill](/docs/skill) — what the agent does
 - [Sample report](/docs/sample-report) — a fictional notes page
+- [Sample comparison](/docs/sample-comparison) — the same page after a revision
 - [Report](/docs/report) — the shape of `report.md`

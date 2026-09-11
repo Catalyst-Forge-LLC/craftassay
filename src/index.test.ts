@@ -19,11 +19,15 @@ function readSkill(): string {
 	);
 }
 
-test("comb skill is the report hour and does not name a CLI", () => {
+test("comb skill is the review workflow and does not name a CLI", () => {
 	const skill = readSkill();
 	assert.match(skill, /^---\nname: craftassay\n/m);
 	assert.match(skill, /Write the deliverables using `references\/report\.md`/);
-	assert.match(skill, /Not Cold-eye/);
+	assert.match(skill, /## Review workflow/);
+	assert.match(skill, /Do not issue a release-readiness verdict/);
+	assert.match(skill, /references\/output\.md/);
+	assert.doesNotMatch(skill, /## The hour/);
+	assert.doesNotMatch(skill, /No action → drop/);
 	assert.doesNotMatch(skill, /npx craftassay/);
 	assert.doesNotMatch(skill, /API key/);
 	const folded =
@@ -49,14 +53,19 @@ test("package ships skills and has no bin", () => {
 test("public copy names the product and the landing example", () => {
 	const home = readFileSync(join(packageRoot, "site", "pages", "home.md"), "utf8");
 	const readme = readFileSync(join(packageRoot, "README.md"), "utf8");
-	assert.match(home, /What works, what creates friction, and what to improve first/);
+	const filepress = readFileSync(join(packageRoot, "site", "filepress.config.ts"), "utf8");
+	assert.match(filepress, /What works, what creates friction, and what to improve first/);
+	assert.match(home, /See a sample review/);
 	assert.match(home, /nothing leaves the machine/);
+	assert.match(home, /CraftAssay and Cold-eye/);
+	assert.match(home, /node_modules\/craftassay\/skills\/craftassay\//);
 	assert.match(home, /Cold-eye/);
 	assert.match(home, /Smell Check/);
 	assert.doesNotMatch(home, /Sibling of/);
+	assert.doesNotMatch(home, /Not Cold-eye/);
 	assert.doesNotMatch(home, /npm \*\*`craftassay`\*\*/);
 	assert.match(readme, /installable review skill/i);
-	assert.match(readme, /Nothing scans the tree/);
+	assert.match(readme, /does not run an automatic scanner/);
 	assert.doesNotMatch(home, /npx craftassay/);
 	const about = readFileSync(join(packageRoot, "site", "pages", "about.md"), "utf8");
 	assert.match(home, /An assay tests what something is made of/);
@@ -113,8 +122,12 @@ test("static sync copies the skill onto the site", () => {
 
 test("install and files pages name the hook and finish the redirects", () => {
 	const install = readFileSync(join(packageRoot, "site", "docs", "install.md"), "utf8");
-	assert.match(install, /Nothing scans the tree/);
+	assert.match(install, /does not run an automatic scanner/);
+	assert.match(install, /## Cursor or Claude Code/);
+	assert.match(install, /## claude\.ai/);
+	assert.match(install, /Do not unzip/);
 	assert.match(install, /craftassay\.zip/);
+	assert.doesNotMatch(install, /missing from the package/);
 	assert.ok(!existsSync(join(packageRoot, "site", "pages", "install.md")));
 	assert.ok(!existsSync(join(packageRoot, "site", "pages", "skill.md")));
 	const redirects = readFileSync(join(packageRoot, "site", "static", "_redirects"), "utf8");
@@ -129,12 +142,23 @@ test("install and files pages name the hook and finish the redirects", () => {
 });
 
 test("fixture shows report shape without scoring a live portfolio", () => {
-	const expected = join(packageRoot, "fixtures", "harbor-note", "expected");
-	for (const name of ["report.md", "scorecard.md", "findings.md", "coverage.md"]) {
-		assert.ok(existsSync(join(expected, name)), name);
+	const first = join(packageRoot, "fixtures", "harbor-note", "expected", "2026-09-11");
+	const second = join(packageRoot, "fixtures", "harbor-note", "expected", "2026-09-18");
+	for (const dir of [first, second]) {
+		for (const name of ["report.md", "scorecard.md", "findings.md", "coverage.md"]) {
+			assert.ok(existsSync(join(dir, name)), `${dir} ${name}`);
+		}
 	}
-	const report = readFileSync(join(expected, "report.md"), "utf8");
+	const report = readFileSync(join(first, "report.md"), "utf8");
 	assert.match(report, /CraftAssay Review: HarborNote/);
 	assert.match(report, /Illustrative fixture/);
 	assert.match(report, /Uniqueness \| NR/);
+	assert.match(report, /fixture-provided/);
+	const comparison = readFileSync(join(second, "report.md"), "utf8");
+	assert.match(comparison, /CraftAssay Comparison: HarborNote/);
+	assert.match(comparison, /harbornote-F001 \| open \| resolved/);
+	assert.match(comparison, /Utility \| 6 \| 6 \| 0/);
+	const findings1 = readFileSync(join(first, "findings.md"), "utf8");
+	assert.match(findings1, /verify-first/);
+	assert.match(findings1, /Signup alone does not establish/);
 });

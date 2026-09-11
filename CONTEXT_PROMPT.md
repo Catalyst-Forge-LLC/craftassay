@@ -8,7 +8,7 @@ _Session continuity. Locked architecture lives in `docs/PHASE_1_BRIEF.md` and `.
 
 ## What this is
 
-CraftAssay is an evidence-backed review of usefulness, clarity, quality, and presentation. The **skill** is the product: an agent reads it and writes the report under `<stem>.craftassay/`. npm ships the folder. There is no command-line reviewer.
+CraftAssay is an evidence-backed review of usefulness, clarity, quality, and presentation. The **skill** is the product: an agent reads it and writes each review into a dated run folder under `<stem>.craftassay/`. npm ships the folder. There is no command-line reviewer. First-use friction stays in scope. CraftAssay does not issue a Cold-eye readiness verdict.
 
 Canonical site host is craftassay.dev. craftassay.com is the same site. npm `craftassay`. GitHub Catalyst-Forge-LLC/craftassay.
 
@@ -39,7 +39,7 @@ craftassay/
 
 ## Data Model
 
-Deliverable directory: `<stem>.craftassay/`. Required files: `report.md`, `scorecard.md`, `findings.md`, `coverage.md`. Shape: `skills/craftassay/references/`. Seven dimensions. Findings use stable IDs and the spec classifications.
+Deliverable directory: `<stem>.craftassay/<YYYY-MM-DD>/` (or `-2` on the same day). Required files: `report.md`, `scorecard.md`, `findings.md`, `coverage.md`. Never overwrite a folder that already has `report.md`. Shape: `skills/craftassay/references/`. Seven dimensions. Findings use stable IDs and the spec classifications. Verify-first findings stay when the next check is clear.
 
 ## Key Architectural Decisions
 

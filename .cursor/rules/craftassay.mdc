@@ -15,9 +15,9 @@ language: a test of composition and quality. Do not split the name
 into two bold words. Do not tell the reader they can skip a word
 in it. Do not lecture them on how to capitalize it.
 
-The **skill** is the product. An agent reads it and writes the report
-under `<stem>.craftassay/`. npm ships the folder. There is no
-command-line reviewer.
+The **skill** is the product. An agent reads it and writes each
+review into a new dated folder under `<stem>.craftassay/`. npm
+ships the folder. There is no command-line reviewer.
 
 Canonical site host is craftassay.dev. craftassay.com is the same site.
 
@@ -25,4 +25,5 @@ Site and README speak as the product (CraftAssay / it). No corporate we.
 No builder I. Oxford comma. No em dashes or semicolons in authored prose.
 
 Do not invent scores. Use NR when evidence is missing. Do not implement
-findings in the reviewed subject. Cold-eye is a different question.
+findings in the reviewed subject. CraftAssay may share first-use
+evidence with Cold-eye. It does not issue a readiness verdict.

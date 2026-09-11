@@ -1,9 +1,12 @@
 # Comparison
 
-Use this file only when an earlier CraftAssay review is supplied.
+Use this file when an earlier CraftAssay review is supplied or
+found locally. Follow `output.md`. Write the comparison into a
+**new** run folder. Do not overwrite the baseline.
 
 1. Retain the original report, date, identities, scores, coverage,
-   and findings. Do not silently rewrite earlier ratings.
+   and findings. Do not silently rewrite earlier ratings. Do not
+   write into the baseline directory.
 2. Inspect current sources and draft the new rationale before
    focusing on numerical deltas.
 3. Record additions, removals, renames, and changed boundaries.

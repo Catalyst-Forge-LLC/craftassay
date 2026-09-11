@@ -18,10 +18,11 @@ The report is an assessment, not a certification.
 ## Review, then decide
 
 Submit a tool, a site, a skill, a spec, or a portfolio. The agent
-writes `report.md` plus a scorecard, findings, and coverage. The
-skill does not edit the source.
+writes a dated run folder with `report.md` plus a scorecard,
+findings, and coverage. The skill does not edit the source.
 
 A later pass with the earlier report attached becomes a comparison.
+It does not overwrite the earlier folder.
 
 ## Install
 
@@ -29,19 +30,21 @@ A later pass with the earlier report attached becomes a comparison.
 pnpm add -D craftassay
 ```
 
-Copy `node_modules/craftassay/skills/craftassay` to
+Copy `node_modules/craftassay/skills/craftassay/` to
 `.cursor/skills/craftassay`. Or skip npm and
-[install the skill](https://craftassay.dev/docs/skill) as a folder.
+[install the skill](https://craftassay.dev/docs/install) as a folder.
 
-Markdown you point an agent at. Nothing scans the tree. v1 has no CLI.
+The package does not run an automatic scanner. The reviewing agent
+may inspect project files you point it at. v1 has no CLI.
 
-## Not Cold-eye
+## CraftAssay and Cold-eye
 
 [Cold-eye](https://coldeye.dev) reviews readiness for a claimed
 first-use path. CraftAssay reviews usefulness, clarity, quality, and
-presentation. [Smell Check](https://smellcheck.dev) reviews unearned
-language. [Detangler](https://detangler.dev) reviews what editing
-tangled.
+presentation, including first-use friction that affects those
+scores. It does not issue a release-readiness verdict.
+[Smell Check](https://smellcheck.dev) reviews unearned language.
+[Detangler](https://detangler.dev) reviews what editing tangled.
 
 ## Development
 

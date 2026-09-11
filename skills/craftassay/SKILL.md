@@ -3,7 +3,7 @@ name: craftassay
 description: >-
   Evidence-backed review of usefulness, clarity, quality, and
   presentation. Review or compare a tool, site, skill, spec, or
-  portfolio. Not Cold-eye, line editing, or implementing findings.
+  portfolio. First-use findings stay. Not a readiness verdict.
 ---
 
 # CraftAssay
@@ -11,8 +11,16 @@ description: >-
 You write the review. The subject does not change.
 
 CraftAssay asks how useful, clear, credible, and well-presented the
-work is, and what should improve. Cold-eye asks whether a newcomer
-can use what is presented as ready. Do not run Cold-eye's job here.
+work is, and what should improve. Inspect the discovery-to-first-use
+path when it bears on those seven dimensions. Report missing
+prerequisites, unusable onboarding, and other first-use friction
+when the evidence supports it.
+
+Cold-eye asks whether a newcomer can use what is presented as ready.
+Do not issue a release-readiness verdict. That conclusion is
+Cold-eye's. The two reviews may share evidence. The distinction
+governs the conclusion, not which facts you may record.
+
 You may recommend a Cold-eye pass, or import a supplied Cold-eye
 review as a source. Preserve its version, scope, date, and evidence.
 
@@ -27,23 +35,21 @@ rubric v1.0. If a full spec file is in the repo
 (`craftassay-review-spec-v1.1.md`), read it when a rule here is
 thin. These reference files win for the report shape you emit.
 
-## The hour
+## Review workflow
 
-1. Locate the subject (a project, site, skill, spec, portfolio, or
-   what they pasted). If none, ask. Establish the intended audience
-   and included surfaces before scoring.
-2. `<stem>` is the filename without its last extension.
-   `README.md` → folder `README.craftassay/` next to the file.
-   A folder or system they named → `craftassay/` at that root.
-   A paste with no file → `subject.craftassay/` in the working
-   directory.
+1. Locate the subject (a project, site, skill, spec, portfolio, a
+   URL, or what they pasted). If none, ask. Establish the intended
+   audience and included surfaces before scoring.
+2. Choose a **new run folder**. Follow `references/output.md`.
+   Never write into a folder that already has `report.md`. Never
+   overwrite a supplied baseline.
 3. Follow `references/coverage.md`. Record what you inspected.
    Stop once the evidence is enough for the stated depth.
 4. Write the deliverables using `references/report.md`.
-   Create the folder if needed.
-5. If they attached an earlier CraftAssay review, also follow
-   `references/comparison.md`. Title that report
-   `CraftAssay Comparison: <subject>`.
+   Create the run folder if needed.
+5. If they attached an earlier CraftAssay review, or you found one
+   locally, also follow `references/comparison.md`. Title that
+   report `CraftAssay Comparison: <subject>`.
 6. Hand over the report. Stop. Do not edit the subject. Do not
    write implementation specs unless they asked in a separate
    instruction.
@@ -83,8 +89,10 @@ Do not lower a score only because confidence is lower.
 Read `references/findings.md` before you emit.
 
 Every material finding needs an id, a classification, a surface,
-evidence, a consequence, a priority, and a smallest sufficient
-change. No action → drop it.
+evidence, a consequence, a priority, and either the smallest
+useful correction or a specific verification step. Drop vague
+criticism. Keep a concrete unresolved question when the next
+check is clear. That is what `verify-first` is for.
 
 ## Rules
 
@@ -97,8 +105,9 @@ change. No action → drop it.
 
 ## When to read the reference files
 
+- `references/output.md` — before you choose a folder.
 - `references/report.md` — before you write `report.md`.
 - `references/dimensions.md` — before you assign scores.
 - `references/findings.md` — before you emit a finding.
 - `references/coverage.md` — before you claim what was checked.
-- `references/comparison.md` — when a baseline review is supplied.
+- `references/comparison.md` — when a baseline review exists.
