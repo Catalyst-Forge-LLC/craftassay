@@ -17,8 +17,7 @@
       "status": "in_progress",
       "startedAt": "2026-09-11T15:30:00",
       "completedAt": null,
-      "exitCriteriaMet": [],
-      "exitCriteriaRemaining": [
+      "exitCriteriaMet": [
         "Tech choices confirmed",
         "Folder structure confirmed",
         "Data model shape confirmed",
@@ -27,10 +26,15 @@
         "PHASE_1_BRIEF.md created, complete, and locked (docs/)",
         "Major decisions recorded in workflow_tracking.json decisions[]"
       ],
+      "exitCriteriaRemaining": [],
       "notes": [
         {
           "timestamp": "2026-09-11T15:30:00",
           "text": "Greenfield kickoff. Canonical review contract is craftassay-review-spec-v1.1.md. Delivery modeled on Smell Check, Detangler, Misemphasis, and Cold-eye: skill + FilePress site + LocalSlip lease + LocalHelm fleet enrollment. No app code until the brief is locked."
+        },
+        {
+          "timestamp": "2026-09-11T16:12:00",
+          "text": "User locked domains, npm, and skill shape. Canonical host craftassay.dev. craftassay.com also points at the same site. npm craftassay is staked. One skill for review and comparison. Cold-eye optional. No CLI. Brief locked. Waiting for explicit scaffold before Phase 2."
         }
       ]
     },
@@ -145,7 +149,7 @@
         "Hosted review web app with accounts",
         "Spec-only repo with no site"
       ],
-      "status": "proposed"
+      "status": "active"
     },
     {
       "id": "d2",
@@ -158,7 +162,7 @@
         "Rewrite a shorter product spec and treat v1.1 as background",
         "Add a hosted validator that becomes the source of truth"
       ],
-      "status": "proposed"
+      "status": "active"
     },
     {
       "id": "d3",
@@ -171,7 +175,7 @@
         "PocketBase plus auth for saved reviews",
         "Runtime LLM API for automated scoring"
       ],
-      "status": "proposed"
+      "status": "active"
     },
     {
       "id": "d4",
@@ -184,7 +188,7 @@
         "SvelteKit app with PocketBase",
         "Static site without FilePress"
       ],
-      "status": "proposed"
+      "status": "active"
     },
     {
       "id": "d5",
@@ -197,7 +201,7 @@
         "Hardcode Vite 5173",
         "Skip fleet enrollment until after first ship"
       ],
-      "status": "proposed"
+      "status": "active"
     },
     {
       "id": "d6",
@@ -210,7 +214,20 @@
         "Separate craftassay-compare skill",
         "Require Cold-eye before a CraftAssay review"
       ],
-      "status": "proposed"
+      "status": "active"
+    },
+    {
+      "id": "d7",
+      "timestamp": "2026-09-11T16:12:00",
+      "phase": "1-architecture",
+      "session": 1,
+      "decision": "Canonical public URL is https://craftassay.dev. https://craftassay.com points at the same site. npm craftassay is already staked.",
+      "rationale": "Owner holds both domains and the package name. FilePress url and canonical links use .dev so the two hosts stay one product.",
+      "alternatives_considered": [
+        "craftassay.com as the FilePress url",
+        "Two separate sites"
+      ],
+      "status": "active"
     }
   ],
   "gotchas": [],
@@ -221,9 +238,9 @@
       "phasesWorked": ["1-architecture"],
       "accomplished": [
         "ForgeTrail tracking and Cursor rules written",
-        "Draft PHASE_1_BRIEF from spec v1.1 and sibling FilePress sites"
+        "PHASE_1_BRIEF locked: .dev primary, .com alias, npm craftassay, one skill, no CLI"
       ],
-      "leftOff": "Phase 1 brief is draft. Waiting for lock on domain, npm name, and the proposed sibling-parity stack.",
+      "leftOff": "Phase 1 brief locked. Waiting for the user to say scaffold before Phase 2.",
       "contextLimitHit": false
     }
   ]

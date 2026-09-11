@@ -2,9 +2,9 @@
 
 Canonical review contract: [`../craftassay-review-spec-v1.1.md`](../craftassay-review-spec-v1.1.md). This file is the stack and repo shape. If they drift on review behavior, the spec wins.
 
-**Status:** draft  
+**Status:** locked  
 **Last updated:** 2026-09-11  
-**Phase 1 exit:** Do not mark Phase 1 complete until this brief is **locked** and major commitments are in `.forgetrail/workflow_tracking.json` `decisions[]`.
+**Phase 1 exit:** User confirmed domains, npm stake, and one skill for review plus comparison. Brief locked. Do not start Phase 2 until they say to scaffold.
 
 ---
 
@@ -20,7 +20,7 @@ CraftAssay is an evidence-backed review of usefulness, clarity, quality, and pre
 
 - Comb skill (`craftassay`) writes a CraftAssay review (and a comparison when a baseline is supplied) under `<stem>.craftassay/`.
 - Deliverables match spec §11: readable report, scorecard, findings register, coverage record. Comparison adds baseline mapping and explained score changes.
-- Site: home, docs (introduction, install, skill, report, sample), about.
+- Site: home, docs (introduction, install, skill, report, sample), about. FilePress `url` is `https://craftassay.dev`. craftassay.com is the same site.
 - npm `craftassay` ships the skill folder plus a tiny path catalog. No `bin`.
 - Spec v1.1 and rubric v1.0 stay in the repo as the contract.
 - LocalSlip lease `craftassay-site` on preferred port **5202**. Repo enrolled in the workspace LocalHelm fleet.
@@ -40,7 +40,7 @@ CraftAssay is an evidence-backed review of usefulness, clarity, quality, and pre
 ## 3. Constraints
 
 - **Technical:** TypeScript ESM, Node ≥20, pnpm. No accounts. Review inputs stay local. The host agent does the judgment. The package does not call a project-owned model.
-- **Business:** proposed npm slug `craftassay`. Proposed site host craftassay.dev unless a different registered domain is named at lock. GitHub Catalyst-Forge-LLC/craftassay. The maintainer publishes to npm and ships the site.
+- **Business:** npm `craftassay` is staked. Canonical site host is `https://craftassay.dev`. `https://craftassay.com` points at the same site. GitHub Catalyst-Forge-LLC/craftassay. The maintainer publishes to npm and ships the site.
 - **Non-goals for v1:** a command-line reviewer, accounts, PocketBase, a hosted scoring API, implementation of reviewed products, launch campaigns, Cold-eye as a required dependency, migrating historical ToolAssay domains.
 
 **State:** local files only. The subject and the `.craftassay/` report tree are the state.
@@ -63,17 +63,17 @@ CraftAssay is an evidence-backed review of usefulness, clarity, quality, and pre
 
 | Area | Choice | Status | Notes |
 | --- | --- | --- | --- |
-| Package | Skill folder + TypeScript path catalog. No `bin`. | proposed | Sibling of Smell Check, Detangler, Misemphasis, Cold-eye |
-| Language | TypeScript, ESM (`"type": "module"`) | proposed | House rule |
-| Runtime | Node ≥20 | proposed | |
-| Package manager | pnpm | proposed | |
-| DB / auth | none | proposed | Local files only |
-| Site | FilePress (`getfilepress`) + Cloudflare Pages | proposed | `pnpm ship` |
-| Local ports | LocalSlip lease `craftassay-site` on **5202** | proposed | Claim once. FilePress reads the lease. |
-| Fleet | LocalHelm row `craftassay` / npm `craftassay` | proposed | Add to workspace `localhelm.fleet.json` at scaffold |
-| Tests | `tsc` + `node --test` on the catalog | proposed | Fixtures are sample subjects, not a scoring engine |
-| License | MIT, Catalyst Forge LLC | proposed | |
-| GitHub | Catalyst-Forge-LLC/craftassay | proposed | |
+| Package | Skill folder + TypeScript path catalog. No `bin`. | confirmed | Sibling of Smell Check, Detangler, Misemphasis, Cold-eye |
+| Language | TypeScript, ESM (`"type": "module"`) | confirmed | House rule |
+| Runtime | Node ≥20 | confirmed | |
+| Package manager | pnpm | confirmed | |
+| DB / auth | none | confirmed | Local files only |
+| Site | FilePress (`getfilepress`) + Cloudflare Pages | confirmed | Canonical URL craftassay.dev. craftassay.com also points here. |
+| Local ports | LocalSlip lease `craftassay-site` on **5202** | confirmed | Claim once. FilePress reads the lease. |
+| Fleet | LocalHelm row `craftassay` / npm `craftassay` | confirmed | Add to workspace `localhelm.fleet.json` at scaffold |
+| Tests | `tsc` + `node --test` on the catalog | confirmed | Fixtures are sample subjects, not a scoring engine |
+| License | MIT, Catalyst Forge LLC | confirmed | |
+| GitHub | Catalyst-Forge-LLC/craftassay | confirmed | |
 
 ```
 craftassay/
@@ -125,7 +125,7 @@ No payments, email, analytics, or search API.
 
 1. The spec is large. The skill must stay usable. Lead with the invocation, the seven dimensions, and the report contract. Keep the full spec in-repo for depth.
 2. CraftAssay vs Cold-eye. Site and skill must state the different questions without inventing a ban on shared findings.
-3. Domain and npm names are proposed, not proven available in this brief.
+3. Both domains must stay one product. Canonical links and `url` in FilePress use `.dev`. `.com` is an alias the owner points.
 4. Aesthetic and uniqueness scores need inspected surfaces. The skill must allow `NR` instead of inventing scores.
 5. A name change or expanded surface must never silently change a baseline score.
 
@@ -145,16 +145,15 @@ No payments, email, analytics, or search API.
 
 **D6.** One skill for review and comparison. Cold-eye stays optional. WHY: spec §0 and §12. Rejected: a second compare package, or a required Cold-eye gate.
 
+**D7.** Canonical public URL is `https://craftassay.dev`. `https://craftassay.com` points at the same site. npm `craftassay` is already staked. WHY: owner holds both domains and the package name. Rejected: `.com` as the FilePress `url`, or a second site.
+
 ---
 
 ## 9. Open questions (before or during Phase 2)
 
 | # | Question | Owner / resolve by |
 | - | -------- | ------------------ |
-| 1 | Live site host. Propose `https://craftassay.dev`. Historical ToolAssay domains stay out of v1 unless named. | User, at lock |
-| 2 | npm package name `craftassay`. Confirm reservation or an alternate slug. | User, at lock |
-| 3 | Preferred LocalSlip port 5202. | User, at lock, or accept default |
-| 4 | Cloudflare Pages project name. Propose `craftassay`. | Can match package name at scaffold |
+| 1 | Cloudflare Pages project name. Propose `craftassay`. | Scaffold default unless named otherwise |
 
 ---
 
@@ -166,8 +165,14 @@ No payments, email, analytics, or search API.
 - Automatic rewrite of the subject
 - Runtime scoring without a host agent
 - PocketBase, auth, billing
-- Redirecting old ToolAssay domains
+- Redirecting old ToolAssay domains (craftassay.com is in scope as an alias, ToolAssay hosts are not)
 - Making Cold-eye a required step
+- A Detangler-style apply skill
+- A YAML or scorecard validator
+- PDF or DOCX export
+- Rescoring the 2026-09-10 Catalyst Forge baseline
+- Writing implementation specs for other repos (spec §10), unless separately requested
+- DNS, Cloudflare custom-hostname setup, npm publish, and the first production ship (owner actions)
 
 ---
 
@@ -183,7 +188,7 @@ No payments, email, analytics, or search API.
 
 ## 12. Handoff checklist (before leaving Phase 1)
 
-- [ ] User has confirmed stack, folder shape, report tree, hero flow, and v1 boundaries
-- [ ] This brief is **locked** (no `[draft]` ambiguity) or remaining items are only in §9
-- [ ] `.forgetrail/workflow_tracking.json` updated: `decisions[]` for each major D#, phase 1 notes summarize sign-off
-- [ ] Phase 2 opener will read **this file** + `.forgetrail/workflow_tracking.json` first
+- [x] User has confirmed stack, folder shape, report tree, hero flow, and v1 boundaries
+- [x] This brief is **locked**. Remaining item in §9 is the Pages project name default
+- [x] `.forgetrail/workflow_tracking.json` updated: `decisions[]` for each major D#, phase 1 notes summarize sign-off
+- [ ] Phase 2 starts only after the user says to scaffold. Opener reads **this file** + `.forgetrail/workflow_tracking.json` first
