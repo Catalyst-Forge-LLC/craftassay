@@ -55,7 +55,8 @@ test("public copy names the product and the landing example", () => {
 	const readme = readFileSync(join(packageRoot, "README.md"), "utf8");
 	const filepress = readFileSync(join(packageRoot, "site", "filepress.config.ts"), "utf8");
 	assert.match(filepress, /What works, what creates friction, and what to improve first/);
-	assert.match(home, /title: What works, what creates friction, and what to improve first/);
+	assert.match(home, /title: See your work with fresh eyes/);
+	assert.doesNotMatch(home, /title: What works, what creates friction/);
 	assert.match(home, /## See a sample review/);
 	assert.match(home, /nothing leaves the machine/);
 	assert.match(home, /CraftAssay and Cold-eye/);
@@ -155,11 +156,33 @@ test("fixture shows report shape without scoring a live portfolio", () => {
 	assert.match(report, /Illustrative fixture/);
 	assert.match(report, /Uniqueness \| NR/);
 	assert.match(report, /fixture-provided/);
+	assert.match(report, /Aesthetics\s+was not rated because no rendered UI was inspected/);
+	assert.match(report, /\*\*Subject identity:\*\* https:\/\/harbornote\.example\//);
+	assert.doesNotMatch(report, /Aesthetic score is from this text page/);
 	const comparison = readFileSync(join(second, "report.md"), "utf8");
 	assert.match(comparison, /CraftAssay Comparison: HarborNote/);
 	assert.match(comparison, /harbornote-F001 \| open \| resolved/);
 	assert.match(comparison, /Utility \| 6 \| 6 \| 0/);
+	assert.match(comparison, /Uniqueness \| NR \| NR \| n\/a/);
+	assert.match(comparison, /Aesthetics \| NR \| NR \| n\/a/);
+	assert.doesNotMatch(comparison, /Uniqueness \| NR \| NR \| 0/);
+	assert.doesNotMatch(comparison, /Aesthetics \| NR \| NR \| 0/);
 	const findings1 = readFileSync(join(first, "findings.md"), "utf8");
 	assert.match(findings1, /verify-first/);
 	assert.match(findings1, /Signup alone does not establish/);
+	const output = readFileSync(join(skillDir("craftassay"), "references", "output.md"), "utf8");
+	assert.match(output, /subject identity/);
+	assert.match(output, /the path\s+must match, not only the host/i);
+	assert.match(output, /before.*create the current run folder/i);
+	assert.match(output, /explicit request to compare two different subjects/i);
+	const skill = readSkill();
+	assert.match(skill, /Discover any baseline \*\*now\*\*, before you write/);
+	const siteReport = readFileSync(join(packageRoot, "site", "docs", "sample-report.md"), "utf8");
+	assert.match(siteReport, /Aesthetics was not rated because no rendered UI was inspected/);
+	const siteComparison = readFileSync(
+		join(packageRoot, "site", "docs", "sample-comparison.md"),
+		"utf8",
+	);
+	assert.match(siteComparison, /Uniqueness \| NR \| NR \| n\/a/);
+	assert.match(siteComparison, /Aesthetics \| NR \| NR \| n\/a/);
 });

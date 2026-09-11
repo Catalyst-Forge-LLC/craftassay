@@ -39,17 +39,21 @@ thin. These reference files win for the report shape you emit.
 
 1. Locate the subject (a project, site, skill, spec, portfolio, a
    URL, or what they pasted). If none, ask. Establish the intended
-   audience and included surfaces before scoring.
-2. Choose a **new run folder**. Follow `references/output.md`.
-   Never write into a folder that already has `report.md`. Never
-   overwrite a supplied baseline.
-3. Follow `references/coverage.md`. Record what you inspected.
+   audience and included surfaces before scoring. Record subject
+   identity. For a URL, include the relevant path, not only the
+   host.
+2. Discover any baseline **now**, before you write. Follow
+   `references/output.md`. Match identity and compatible scope.
+   If none match, this is an initial review. An explicit request
+   to compare different subjects is allowed.
+3. Choose a **new run folder**. Never write into a folder that
+   already has `report.md`. Never overwrite a supplied baseline.
+4. Follow `references/coverage.md`. Record what you inspected.
    Stop once the evidence is enough for the stated depth.
-4. Write the deliverables using `references/report.md`.
-   Create the run folder if needed.
-5. If they attached an earlier CraftAssay review, or you found one
-   locally, also follow `references/comparison.md`. Title that
-   report `CraftAssay Comparison: <subject>`.
+5. Write the deliverables using `references/report.md`.
+   Create the run folder if needed. If a matching baseline exists,
+   also follow `references/comparison.md`. Title that report
+   `CraftAssay Comparison: <subject>`.
 6. Hand over the report. Stop. Do not edit the subject. Do not
    write implementation specs unless they asked in a separate
    instruction.

@@ -1,5 +1,5 @@
 ---
-title: What works, what creates friction, and what to improve first.
+title: See your work with fresh eyes.
 description: Evidence-backed reviews of usefulness, clarity, quality, and presentation. An agent writes the report, scores, and findings.
 order: 0
 ---

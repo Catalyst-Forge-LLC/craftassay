@@ -47,6 +47,8 @@ Utility, Accuracy, Uniqueness, Quality, Clarity, Aesthetics, and Overall appeal.
 
 ## HarborNote (`harbornote.example`)
 
+**Subject identity:** https://harbornote.example/
+
 **User and job:** A person who wants local notes without a cloud.
 
 **What works and should remain:** Notes that work without a network, and a privacy line that names the sync exception.
@@ -83,10 +85,10 @@ No remaining contradiction between a universal privacy guarantee and automatic s
 | --- | --- | ---: | ---: | ---: | --- | --- |
 | HarborNote | Utility | 6 | 6 | 0 | matched | The job is still local notes. Bounding the privacy claim did not change usefulness. |
 | HarborNote | Accuracy | 3 | 6 | +3 | matched | Product or presentation improvement. The page no longer claims nothing leaves, then promises automatic sync. |
-| HarborNote | Uniqueness | NR | NR | 0 | matched | Still no focused comparison. |
+| HarborNote | Uniqueness | NR | NR | n/a | matched | Still no focused comparison. Both sides remain unassessed. |
 | HarborNote | Quality | 4 | 4 | 0 | matched | The whitepaper 404 is gone. First use still starts at signup, so the score does not move. |
 | HarborNote | Clarity | 5 | 6 | +1 | matched | Product or presentation improvement. A reader can now name when notes stay local. One-point editorial judgment. |
-| HarborNote | Aesthetics | NR | NR | 0 | matched | Still no rendered UI. |
+| HarborNote | Aesthetics | NR | NR | n/a | matched | Still no rendered UI. Both sides remain unassessed. |
 | HarborNote | Overall appeal | 4 | 5 | +1 | matched | Product or presentation improvement. The contradiction that caused hesitation is gone. Signup still sits on first use. |
 
 A finding can resolve without a score change. Utility stayed at 6 after F001 was corrected. Quality stayed at 4 after F002 was corrected.

@@ -18,7 +18,7 @@ The page names a local notes job, then immediately contradicts it. The strongest
 
 ## Coverage and limits
 
-Inspected the fixture page only. No executable app, no live host, no competing notes tools beyond a labeled inference. Aesthetic score is from this text page, not a rendered UI.
+Inspected the fixture page only. No executable app, no live host, no competing notes tools beyond a labeled inference. Aesthetics was not rated because no rendered UI was inspected.
 
 ## Scoring definitions
 
@@ -37,6 +37,8 @@ Utility, Accuracy, Uniqueness, Quality, Clarity, Aesthetics, and Overall appeal.
 | Overall appeal | 4 | medium |
 
 ## HarborNote (`harbornote.example`)
+
+**Subject identity:** https://harbornote.example/
 
 **User and job:** A person who wants local notes without a cloud.
 

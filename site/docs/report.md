@@ -8,10 +8,10 @@ title: Report
 2. Coverage and limits
 3. Scoring definitions
 4. Scorecard
-5. Per-project critique
+5. Per-project critique, including subject identity
 6. Highest-confidence errors and claim issues
 7. Prioritized actions
-8. Comparison with baseline, when one exists
+8. Comparison with a matching baseline, when one exists
 
 Every material finding has an id, a classification, a surface, evidence, a consequence, a priority, and either the smallest useful correction or a specific verification step. Drop vague criticism. Keep a concrete unresolved question when the next check is clear.
 

@@ -13,8 +13,8 @@ universal privacy wording against automatic multi-device sync.
 ## Coverage and limits
 
 Inspected the fixture page only. No executable app, no live host,
-no competing notes tools beyond a labeled inference. Aesthetic
-score is from this text page, not a rendered UI.
+no competing notes tools beyond a labeled inference. Aesthetics
+was not rated because no rendered UI was inspected.
 
 ## Scoring definitions
 
@@ -36,6 +36,7 @@ inspected presentation, not a measured bug rate.
 
 ## HarborNote (`harbornote.example`)
 
+**Subject identity:** https://harbornote.example/
 **User and job:** A person who wants local notes without a cloud.
 **What works and should remain:** Notes that work without a network.
 **Review:** The hero says nothing leaves the machine. The same page
