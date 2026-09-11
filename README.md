@@ -19,7 +19,7 @@ The report is an assessment, not a certification.
 
 Submit a tool, a site, a skill, a spec, or a portfolio. The agent
 writes `report.md` plus a scorecard, findings, and coverage. The
-source stays unchanged.
+skill does not edit the source.
 
 A later pass with the earlier report attached becomes a comparison.
 

@@ -71,5 +71,6 @@ CLI reviewer, apply skill, YAML validator, PDF/DOCX, accounts, billing, implemen
 
 ## Recent Changes
 
+- 2026-09-11: Smell Check and Misemphasis on public copy. Dropped the Craft / Assay unpack. Overlay in `docs/smellcheck.md`. Report in `site.misemphasis/report.md`.
 - 2026-09-11: Phase 2 spine. Skill, catalog, FilePress site, HarborNote fixture, LocalSlip 5202, LocalHelm fleet row.
 - 2026-09-11: Phase 1 locked. .dev primary, .com alias, npm craftassay, one skill, no CLI.

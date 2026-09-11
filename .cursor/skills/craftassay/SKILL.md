@@ -16,9 +16,9 @@ can use what is presented as ready. Do not run Cold-eye's job here.
 You may recommend a Cold-eye pass, or import a supplied Cold-eye
 review as a source. Preserve its version, scope, date, and evidence.
 
-Use the exact name **CraftAssay**. Explain the service in plain
-language before the name or the assay metaphor. Familiar labels:
-Review, Findings, Scores, Evidence, Compare versions.
+Use the exact name **CraftAssay**. Familiar labels: Review,
+Findings, Scores, Evidence, Compare versions. Do not unpack the
+name. Do not tell the reader they can skip a word in it.
 
 The contract is Review and Comparison Specification v1.1, scoring
 rubric v1.0. If a full spec file is in the repo

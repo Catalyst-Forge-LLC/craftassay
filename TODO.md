@@ -13,6 +13,8 @@ Flat list until Phase 6 reorganizes by brand pillars.
 
 ## Next
 
+- [x] Smell Check pass on public copy (`docs/smellcheck.md`)
+- [x] Misemphasis pass on public copy (`site.misemphasis/report.md`)
 - [ ] Dogfood the CraftAssay skill on this site and README
 - [ ] AppFacts / SkillFacts nutrition labels
 - [ ] First public `pnpm ship` and npm publish (human)

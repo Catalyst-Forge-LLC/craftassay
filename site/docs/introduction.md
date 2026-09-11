@@ -4,11 +4,11 @@ title: Introduction
 
 **CraftAssay** reviews a tool, site, skill, specification, or related portfolio. An agent reads the skill and writes a report with findings, scores, and evidence that can be compared later.
 
-The review follows usefulness, clarity, quality, and presentation. It is not a certification. It is not release approval.
+It scores usefulness, clarity, quality, and presentation. It is not a certification. It is not release approval.
 
 ## The report comes first
 
-Submit a project, a site, a file, or a paste. The skill writes `report.md` plus a scorecard, findings, and coverage. The subject does not change.
+Submit a project, a site, a file, or a paste. The skill writes `report.md` plus a scorecard, findings, and coverage. The skill does not edit the source.
 
 | Dimension | Asks |
 | --- | --- |
@@ -24,7 +24,7 @@ Use NR when evidence is missing. Do not invent an aesthetic score for an uninspe
 
 ## Not Cold-eye
 
-[Cold-eye](https://coldeye.dev) checks readiness for a claimed first-use path. CraftAssay can recommend that pass. It does not require it.
+[Cold-eye](https://coldeye.dev) checks readiness for a claimed first-use path. CraftAssay can recommend that pass. It does not require it. A clean Cold-eye review does not mean CraftAssay will score the work highly.
 
 ## Start here
 

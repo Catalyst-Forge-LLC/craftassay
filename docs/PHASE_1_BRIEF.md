@@ -12,7 +12,7 @@ Canonical review contract: [`../craftassay-review-spec-v1.1.md`](../craftassay-r
 
 Builders ship tools, sites, skills, and portfolios. A useful critique needs a stable job, evidence, scores that can be compared later, and findings that name the smallest fix. Informal reviews drift. Scores move without a reason. Findings vanish or get counted twice.
 
-CraftAssay is an evidence-backed review of usefulness, clarity, quality, and presentation. An agent with the skill writes the report. The FilePress site explains the method and how to install the skill. The name combines craft with assay. Site copy must explain the service in plain language before relying on the metaphor. Familiar labels are Review, Findings, Scores, Evidence, and Compare versions.
+CraftAssay is an evidence-backed review of usefulness, clarity, quality, and presentation. An agent with the skill writes the report. The FilePress site explains the method and how to install the skill. Familiar labels are Review, Findings, Scores, Evidence, and Compare versions. Do not unpack the name on the site.
 
 **Project archetype:** `product`
 

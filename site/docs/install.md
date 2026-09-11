@@ -6,7 +6,7 @@ The [skill](/docs/skill) is the product. One folder. The agent reads it and writ
 
 [craftassay.zip](/skills/craftassay.zip)
 
-Nothing scans the tree. You point the agent at the subject.
+Nothing scans the tree. You point the agent at the work.
 
 ## Drop the folder in
 
@@ -22,7 +22,7 @@ You do not need npm. You need a folder that contains `SKILL.md`.
 | Claude Code | `~/.claude/skills/craftassay/` or `.claude/skills/craftassay/` in the repo |
 | claude.ai | Settings → Customize → Skills → upload the zip (do not unzip) |
 
-4. Ask for a CraftAssay review of the subject.
+4. Ask for a CraftAssay review of the work.
 
 That is the whole install. The agent reads the folder and writes the report.
 
