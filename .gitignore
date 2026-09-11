@@ -4,7 +4,9 @@ dist/
 site/build/
 site/docs/dist/
 site/static/skills/
+site/.filepress/
 .DS_Store
 Thumbs.db
 .env
 .env.*
+!.env.example

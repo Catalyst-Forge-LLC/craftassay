@@ -11,12 +11,12 @@
     "supportsSubagents": true,
     "supportsPlanMode": true
   },
-  "currentPhase": "1-architecture",
+  "currentPhase": "2-scaffolding",
   "phases": {
     "1-architecture": {
-      "status": "in_progress",
+      "status": "completed",
       "startedAt": "2026-09-11T15:30:00",
-      "completedAt": null,
+      "completedAt": "2026-09-11T16:37:00",
       "exitCriteriaMet": [
         "Tech choices confirmed",
         "Folder structure confirmed",
@@ -39,22 +39,31 @@
       ]
     },
     "2-scaffolding": {
-      "status": "not_started",
-      "startedAt": null,
+      "status": "in_progress",
+      "startedAt": "2026-09-11T16:37:00",
       "completedAt": null,
-      "exitCriteriaMet": [],
-      "exitCriteriaRemaining": [
-        "App runs with pnpm dev",
-        "Real data visible on screen",
-        "Core CRUD works",
-        "Hero flow functions end to end",
+      "exitCriteriaMet": [
         "CONTEXT_PROMPT.md created and populated by merging PHASE_1_BRIEF.md (then template lessons as needed)",
         "README.md created (from ForgeTrail template)",
         "TODO.md created (from ForgeTrail template, seeded from PHASE_1_BRIEF §11)",
         "IDEAS.md created (from ForgeTrail template)",
-        "Phase 2 doc scope only per WORKFLOW §1a (no premature extra templates)"
+        "Phase 2 doc scope only per WORKFLOW §1a (no premature extra templates)",
+        "App runs with pnpm dev",
+        "Real data visible on screen",
+        "Core CRUD works",
+        "Hero flow functions end to end"
       ],
-      "notes": []
+      "exitCriteriaRemaining": [],
+      "notes": [
+        {
+          "timestamp": "2026-09-11T16:37:00",
+          "text": "User said proceed. Phase 2 scaffold: skill, catalog, FilePress site, HarborNote fixture, LocalSlip 5202, LocalHelm fleet row. Pages project name craftassay."
+        },
+        {
+          "timestamp": "2026-09-11T16:41:00",
+          "text": "Spine verified: pnpm test green. site:dev on 5202. Home, docs, install, sample report, about, and craftassay.zip all serve. Waiting for user to confirm Phase 2 complete."
+        }
+      ]
     },
     "3-stabilization": {
       "status": "not_started",
@@ -228,19 +237,39 @@
         "Two separate sites"
       ],
       "status": "active"
+    },
+    {
+      "id": "d8",
+      "timestamp": "2026-09-11T16:37:00",
+      "phase": "2-scaffolding",
+      "session": 1,
+      "decision": "Cloudflare Pages project name is craftassay.",
+      "rationale": "Matches the package and the locked brief default.",
+      "alternatives_considered": ["craftassay-dev"],
+      "status": "active"
     }
   ],
-  "gotchas": [],
+  "gotchas": [
+    {
+      "timestamp": "2026-09-11T16:40:00",
+      "phase": "2-scaffolding",
+      "session": 1,
+      "issue": "localslip claim failed on Windows when --notes was FilePress site. spawnSync with shell:true splits the value.",
+      "resolution": "Use a single-token notes value (FilePress).",
+      "category": "tooling"
+    }
+  ],
   "sessions": [
     {
       "session": 1,
       "date": "2026-09-11",
-      "phasesWorked": ["1-architecture"],
+      "phasesWorked": ["1-architecture", "2-scaffolding"],
       "accomplished": [
-        "ForgeTrail tracking and Cursor rules written",
-        "PHASE_1_BRIEF locked: .dev primary, .com alias, npm craftassay, one skill, no CLI"
+        "PHASE_1_BRIEF locked",
+        "Skill, catalog, FilePress site, HarborNote fixture, LocalSlip, LocalHelm fleet row",
+        "pnpm test green, site verified on 5202"
       ],
-      "leftOff": "Phase 1 brief locked. Waiting for the user to say scaffold before Phase 2.",
+      "leftOff": "Phase 2 spine is up. Waiting for user confirmation before marking Phase 2 complete.",
       "contextLimitHit": false
     }
   ]

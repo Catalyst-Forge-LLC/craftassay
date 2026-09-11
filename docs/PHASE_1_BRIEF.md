@@ -191,4 +191,4 @@ No payments, email, analytics, or search API.
 - [x] User has confirmed stack, folder shape, report tree, hero flow, and v1 boundaries
 - [x] This brief is **locked**. Remaining item in §9 is the Pages project name default
 - [x] `.forgetrail/workflow_tracking.json` updated: `decisions[]` for each major D#, phase 1 notes summarize sign-off
-- [ ] Phase 2 starts only after the user says to scaffold. Opener reads **this file** + `.forgetrail/workflow_tracking.json` first
+- [x] Phase 2 started after the user said to scaffold. Opener reads **this file** + `.forgetrail/workflow_tracking.json` first
