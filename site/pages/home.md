@@ -4,7 +4,7 @@ description: Evidence-backed reviews of usefulness, clarity, quality, and presen
 order: 0
 ---
 
-CraftAssay reviews usefulness, clarity, quality, and presentation. An agent reads the skill and writes the report. The skill does not edit the source. Run it again later to compare this review with the last one.
+An assay tests what something is made of, and how good it is. CraftAssay does that for a tool, a site, or a page: usefulness, clarity, quality, and presentation. An agent reads the skill and writes the report. The skill does not edit the source. Run it again later to compare this review with the last one.
 
 [Docs](/docs/) · [Install](/docs/install) · [Skill](/docs/skill) · [About](/about)
 

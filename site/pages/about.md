@@ -4,7 +4,9 @@ description: What CraftAssay is, and why the report leaves the source alone.
 order: 3
 ---
 
-CraftAssay is a review with findings, scores, evidence, and a way to compare versions.
+An assay is a test of composition and quality. You take a sample, you measure what is actually there, and you say how it stands.
+
+CraftAssay is that kind of review: findings, scores, evidence, and a way to compare versions.
 
 Use the exact capitalization **CraftAssay**. The report is an assessment, not a certification and not a guarantee of reliability.
 

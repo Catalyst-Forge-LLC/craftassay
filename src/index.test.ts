@@ -59,6 +59,8 @@ test("public copy names the product and the landing example", () => {
 	assert.match(readme, /Nothing scans the tree/);
 	assert.doesNotMatch(home, /npx craftassay/);
 	const about = readFileSync(join(packageRoot, "site", "pages", "about.md"), "utf8");
+	assert.match(home, /An assay tests what something is made of/);
+	assert.match(about, /An assay is a test of composition and quality/);
 	assert.match(about, /\*\*CraftAssay\*\*/);
 	assert.doesNotMatch(about, /second word/);
 	assert.doesNotMatch(about, /\*\*Assay\*\*/);
@@ -66,6 +68,9 @@ test("public copy names the product and the landing example", () => {
 	assert.match(about, /craftassay\.com/);
 	assert.match(home, /\[About\]\(\/about\)/);
 	assert.doesNotMatch(home, /Why the name/);
+	const logo = readFileSync(join(packageRoot, "site", "static", "logo.png"));
+	assert.equal(logo.readUInt32BE(0), 0x89504e47);
+	assert.ok(logo.length > 10_000);
 });
 
 test("docs nav has a markdown file for every item", () => {

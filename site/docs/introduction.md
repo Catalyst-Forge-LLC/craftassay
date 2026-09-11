@@ -2,7 +2,7 @@
 title: Introduction
 ---
 
-**CraftAssay** reviews a tool, site, skill, specification, or related portfolio. An agent reads the skill and writes a report with findings, scores, and evidence that can be compared later.
+An assay tests what something is made of, and how good it is. **CraftAssay** does that for a tool, site, skill, specification, or related portfolio. An agent reads the skill and writes a report with findings, scores, and evidence that can be compared later.
 
 It scores usefulness, clarity, quality, and presentation. It is not a certification. It is not release approval.
 

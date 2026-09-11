@@ -10,8 +10,10 @@ Architecture: [`docs/PHASE_1_BRIEF.md`](../../docs/PHASE_1_BRIEF.md).
 If they drift on review behavior, the spec wins.
 
 Use **CraftAssay** with that capitalization. Familiar labels:
-Review, Findings, Scores, Evidence, Compare versions. Do not unpack
-the name. Do not tell the reader they can skip a word in it.
+Review, Findings, Scores, Evidence, Compare versions. You may say
+what an assay is in ordinary language: a test of composition and
+quality. Do not split the name into two bold words. Do not tell
+the reader they can skip a word in it.
 
 The **skill** is the product. An agent reads it and writes the report
 under `<stem>.craftassay/`. npm ships the folder. There is no
