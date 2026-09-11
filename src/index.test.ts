@@ -55,7 +55,8 @@ test("public copy names the product and the landing example", () => {
 	const readme = readFileSync(join(packageRoot, "README.md"), "utf8");
 	const filepress = readFileSync(join(packageRoot, "site", "filepress.config.ts"), "utf8");
 	assert.match(filepress, /What works, what creates friction, and what to improve first/);
-	assert.match(home, /See a sample review/);
+	assert.match(home, /title: What works, what creates friction, and what to improve first/);
+	assert.match(home, /## See a sample review/);
 	assert.match(home, /nothing leaves the machine/);
 	assert.match(home, /CraftAssay and Cold-eye/);
 	assert.match(home, /node_modules\/craftassay\/skills\/craftassay\//);

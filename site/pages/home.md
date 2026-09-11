@@ -1,10 +1,12 @@
 ---
-title: See a sample review
+title: What works, what creates friction, and what to improve first.
 description: Evidence-backed reviews of usefulness, clarity, quality, and presentation. An agent writes the report, scores, and findings.
 order: 0
 ---
 
 An assay tests what something is made of, and how good it is. CraftAssay does that for a tool, a site, or a page: usefulness, clarity, quality, and presentation. An agent reads the skill and writes the report. The skill does not edit the source. Run it again later to compare this review with the last one.
+
+## See a sample review
 
 [HarborNote review](/docs/sample-report) · [Then the comparison](/docs/sample-comparison)
 
