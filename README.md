@@ -9,33 +9,48 @@ An installable review skill for AI agents.
 An assay tests what something is made of, and how good it is.
 CraftAssay does that for a tool, a site, or a page. It writes
 findings and scores that can be compared across revisions.
-npm **`craftassay`**.
 
 The report is an assessment, not a certification.
 
-**Docs:** [craftassay.dev/docs](https://craftassay.dev/docs) · **Site:** [craftassay.dev](https://craftassay.dev)
+**Get started:** pick the agent, install the skill, then run the
+HarborNote page —
+[craftassay.dev/docs/install](https://craftassay.dev/docs/install).
 
-## Review, then decide
+- [Cursor](https://craftassay.dev/docs/install#cursor)
+- [Claude Code](https://craftassay.dev/docs/install#claude-code)
+- [Claude.ai](https://craftassay.dev/docs/install#claudeai)
 
-Submit a tool, a site, a skill, a spec, or a portfolio. The agent
-writes a dated run folder with `report.md` plus a scorecard,
-findings, and coverage. The skill does not edit the source.
+**Site:** [craftassay.dev](https://craftassay.dev)
 
-A later pass with the earlier report attached becomes a comparison.
-It does not overwrite the earlier folder.
+## First run
 
-## Install
+Save a short page that says nothing leaves the machine and also
+promises automatic sync, then ask:
+
+> Use CraftAssay on `harbor-note.md`. Follow the installed CraftAssay
+> skill. Write the report.
+
+The run lands in `harbor-note.craftassay/<YYYY-MM-DD>/`. The page
+should be unchanged. The report should name the privacy contradiction.
+
+The package does not run an automatic scanner. The reviewing agent
+may inspect project files you point it at. v1 has no CLI.
+
+## Other installation methods
+
+npm supplies the skill files. It does not register the skill with the
+agent.
 
 ```bash
 pnpm add -D craftassay
 ```
 
-Copy `node_modules/craftassay/skills/craftassay/` to
-`.cursor/skills/craftassay`. Or skip npm and
-[install the skill](https://craftassay.dev/docs/install) as a folder.
+Copy `node_modules/craftassay/skills/craftassay/` into the same
+destination the [Get started](https://craftassay.dev/docs/install)
+page names for your agent.
 
-The package does not run an automatic scanner. The reviewing agent
-may inspect project files you point it at. v1 has no CLI.
+Updating the npm dependency does not refresh a folder you already
+copied. Copy again after you bump the package.
 
 ## CraftAssay and Cold-eye
 

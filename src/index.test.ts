@@ -60,7 +60,8 @@ test("public copy names the product and the landing example", () => {
 	assert.match(home, /## See a sample review/);
 	assert.match(home, /nothing leaves the machine/);
 	assert.match(home, /CraftAssay and Cold-eye/);
-	assert.match(home, /node_modules\/craftassay\/skills\/craftassay\//);
+	assert.match(home, /Install in your agent/);
+	assert.doesNotMatch(home, /pnpm add/);
 	assert.match(home, /Cold-eye/);
 	assert.match(home, /Smell Check/);
 	assert.doesNotMatch(home, /Sibling of/);
@@ -88,11 +89,17 @@ test("public copy names the product and the landing example", () => {
 test("docs nav has a markdown file for every item", () => {
 	const nav = JSON.parse(
 		readFileSync(join(packageRoot, "site", "docs", "_nav.json"), "utf8"),
-	) as { sections: Array<{ items: Array<{ id: string }> }> };
+	) as {
+		sections: Array<{ items: Array<{ id: string }> }>;
+		aliases?: Array<{ id: string }>;
+	};
 	for (const section of nav.sections) {
 		for (const item of section.items) {
 			assert.ok(existsSync(join(packageRoot, "site", "docs", `${item.id}.md`)), item.id);
 		}
+	}
+	for (const item of nav.aliases ?? []) {
+		assert.ok(existsSync(join(packageRoot, "site", "docs", `${item.id}.md`)), item.id);
 	}
 	execFileSync("node", [join(packageRoot, "site", "scripts", "build-docs.mjs")], {
 		cwd: join(packageRoot, "site"),
@@ -125,10 +132,13 @@ test("static sync copies the skill onto the site", () => {
 test("install and files pages name the hook and finish the redirects", () => {
 	const install = readFileSync(join(packageRoot, "site", "docs", "install.md"), "utf8");
 	assert.match(install, /does not run an automatic scanner/);
-	assert.match(install, /## Cursor or Claude Code/);
-	assert.match(install, /## claude\.ai/);
+	assert.match(install, /Which agent do you use/);
+	assert.match(install, /## Cursor/);
+	assert.match(install, /## Claude Code/);
+	assert.match(install, /## Claude\.ai/);
 	assert.match(install, /Do not unzip/);
 	assert.match(install, /craftassay\.zip/);
+	assert.match(install, /Other installation methods/);
 	assert.doesNotMatch(install, /missing from the package/);
 	assert.ok(!existsSync(join(packageRoot, "site", "pages", "install.md")));
 	assert.ok(!existsSync(join(packageRoot, "site", "pages", "skill.md")));
@@ -137,7 +147,9 @@ test("install and files pages name the hook and finish the redirects", () => {
 	assert.match(redirects, /\/skill \/docs\/skill 308/);
 	const filepress = readFileSync(join(packageRoot, "site", "filepress.config.ts"), "utf8");
 	assert.match(filepress, /href: "\/docs\/install"/);
-	assert.match(filepress, /href: "\/docs\/skill"/);
+	assert.match(filepress, /Get started/);
+	assert.doesNotMatch(filepress, /label: "Skill"/);
+	assert.doesNotMatch(filepress, /label: "Install"/);
 	assert.match(filepress, /url: "https:\/\/craftassay\.dev"/);
 	assert.doesNotMatch(filepress, /href: "\/install"/);
 	assert.doesNotMatch(filepress, /href: "\/posts"/);

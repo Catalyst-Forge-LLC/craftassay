@@ -1,58 +1,154 @@
 ---
-title: Install
+title: Get started
 ---
 
-The [skill](/docs/skill) is the product. One folder. The agent reads it and writes the report.
+Install the skill in your agent, then use it. You do not need Node or npm for this path. The package does not run an automatic scanner. The reviewing agent may inspect project files you point it at.
 
-[craftassay.zip](/skills/craftassay.zip)
+## Which agent do you use?
 
-The package does not run an automatic scanner. The reviewing agent may inspect project files you point it at.
+- [Cursor](#cursor)
+- [Claude Code](#claude-code)
+- [Claude.ai](#claudeai)
 
-You do not need npm. You need a folder that contains `SKILL.md`.
+A folder on disk is not proof the agent found the skill. The first run below is the check.
 
-## Cursor or Claude Code
+## Cursor
 
-1. Download the zip.
-2. Unzip it. You should see `SKILL.md` and a `references/` folder.
-3. Put that folder here:
+### Get it
 
-| Where you work | Put the folder here |
-| --- | --- |
-| Cursor | `.cursor/skills/craftassay/` in the project, or `~/.cursor/skills/craftassay/` |
-| Claude Code | `~/.claude/skills/craftassay/` or `.claude/skills/craftassay/` in the repo |
+Download [craftassay.zip](/skills/craftassay.zip).
 
-4. Ask for a CraftAssay review of the work.
+### Add it
 
-## claude.ai
+Unzip it. You should see `SKILL.md` and a `references/` folder.
 
-1. Download the zip.
-2. Open Settings → Customize → Skills.
-3. Upload the zip. Do not unzip it.
+Put that folder in the project you are reviewing:
 
-4. Ask for a CraftAssay review of the work.
+`.cursor/skills/craftassay/`
 
-That is the whole install. The agent reads the folder and writes the report.
+[Install for all projects](#install-for-all-projects) if you want it in every Cursor project.
 
-## If you already use npm
+### Confirm it
+
+Ask Cursor to use CraftAssay on the sample below. If it writes a dated run folder with `report.md`, it found the skill and the reference files.
+
+### Try it
+
+Save this page as `harbor-note.md` in the project:
+
+```markdown
+# HarborNote
+
+Nothing leaves your machine. Ever.
+
+HarborNote is the notes app for people who are tired of clouds.
+Install it, type, and you are done. Every device stays in sync
+automatically.
+```
+
+Then ask:
+
+> Use CraftAssay on `harbor-note.md`. Follow the installed CraftAssay skill. Write the report.
+
+### Find the result
+
+The run lands in `harbor-note.craftassay/<YYYY-MM-DD>/` next to the file. Open `report.md`.
+
+Success looks like this shape, not identical wording or scores from every model:
+
+- Findings and scores, with NR where evidence is missing
+- The privacy claim against automatic sync named as a problem
+- The page itself left unchanged
+
+A later pass with the earlier report attached becomes a comparison. It does not overwrite the earlier folder.
+
+## Claude Code
+
+### Get it
+
+Download [craftassay.zip](/skills/craftassay.zip).
+
+### Add it
+
+Unzip, then put the folder in the repo you are reviewing:
+
+`.claude/skills/craftassay/`
+
+[Install for all projects](#install-for-all-projects) uses `~/.claude/skills/craftassay/` instead.
+
+### Confirm it
+
+Same check as Cursor: the first run must produce `report.md`.
+
+### Try it
+
+Same request as [Cursor](#try-it).
+
+### Find the result
+
+Same path as [Cursor](#find-the-result).
+
+## Claude.ai
+
+### Get it
+
+Download [craftassay.zip](/skills/craftassay.zip).
+
+### Add it
+
+Do not unzip. Open Settings → Customize → Skills and upload the zip.
+
+### Confirm it
+
+Start a chat and run the request below. If the agent writes a CraftAssay report, it loaded the skill.
+
+### Try it
+
+Paste the HarborNote page from [Cursor](#try-it), then ask:
+
+> Use CraftAssay on this page. Follow the installed CraftAssay skill. Write the report.
+
+### Find the result
+
+The report appears in the chat. When the agent can write files, it lands in `harbor-note.craftassay/<YYYY-MM-DD>/report.md`.
+
+## After the review
+
+There is no apply skill. Read the findings. Keep what works. Make the smallest useful correction yourself, or ask your agent to make that named edit outside this skill.
+
+The source stays unchanged until you do that.
+
+## Other ways to ask
+
+Once the first run works:
+
+- CraftAssay review of this site.
+- Review this README using CraftAssay.
+- Compare this landing page against the attached baseline review.
+
+Those are later shortcuts. They are not the install check.
+
+## Other installation methods
+
+npm supplies the skill files. It does not register the skill with the agent.
 
 ```bash
 pnpm add -D craftassay
 ```
 
-Copy `node_modules/craftassay/skills/craftassay/` into a skills directory.
+Copy `node_modules/craftassay/skills/craftassay/` into the same destination you would use above.
 
-Or clone the [repo](https://github.com/Catalyst-Forge-LLC/craftassay) and copy `skills/craftassay/`.
+Updating the npm dependency does not refresh a folder you already copied. Copy again after you bump the package.
 
 Node.js 20+. The package is [`craftassay`](https://www.npmjs.com/package/craftassay) on npm.
 
-Example prompts: [Skill](/docs/skill). A [sample report](/docs/sample-report).
+Or clone the [repo](https://github.com/Catalyst-Forge-LLC/craftassay) and copy `skills/craftassay/`.
 
-## What the skill writes
+### Install for all projects
 
-| Folder | Deliverable |
-| --- | --- |
-| `<stem>.craftassay/<YYYY-MM-DD>/` next to the file | `report.md`, `scorecard.md`, `findings.md`, `coverage.md` |
-| `craftassay/<YYYY-MM-DD>/` at a named root | same files |
-| `subject.craftassay/<YYYY-MM-DD>/` for a URL or paste | same files |
+- Cursor: `~/.cursor/skills/craftassay/`
+- Claude Code: `~/.claude/skills/craftassay/`
 
-Each run gets a new dated folder. The agent does not overwrite a folder that already has `report.md`.
+Same folder shape. The first-run check is the same.
+
+A [sample report](/docs/sample-report). A [sample comparison](/docs/sample-comparison).

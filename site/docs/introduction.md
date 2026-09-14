@@ -1,14 +1,22 @@
 ---
-title: Introduction
+title: What it does
 ---
 
-An assay tests what something is made of, and how good it is. **CraftAssay** does that for a tool, site, skill, specification, or related portfolio. An agent reads the skill and writes a report with findings, scores, and evidence that can be compared later.
+An assay tests what something is made of, and how good it is. **CraftAssay** is an installable review skill for AI agents. It does that for a tool, site, skill, specification, or related portfolio.
+
+An agent reads the skill and writes a report with findings, scores, and evidence that can be compared later.
+
+**[Get started](/docs/install)** — install the skill in your agent, then use it.
 
 It scores usefulness, clarity, quality, and presentation. It is not a certification. It is not release approval.
 
-## The report comes first
+## What it reads, writes, and changes
 
-Submit a project, a site, a file, or a paste. The skill writes a dated run folder with `report.md`, a scorecard, findings, and coverage. The skill does not edit the source.
+| | |
+| --- | --- |
+| Reads | A project, site, file, URL, or paste |
+| Writes | A dated run folder with `report.md`, a scorecard, findings, and coverage |
+| Changes | Nothing. You decide what to fix |
 
 | Dimension | Asks |
 | --- | --- |
@@ -26,10 +34,4 @@ Use NR when evidence is missing. Do not invent an aesthetic score for an uninspe
 
 [Cold-eye](https://coldeye.dev) checks readiness for a claimed first-use path. CraftAssay still reports first-use friction when it affects its scores. It does not issue a release-readiness verdict. A clean Cold-eye review does not mean CraftAssay will score the work highly.
 
-## Start here
-
-- [Install](/docs/install) — download the zip
-- [Skill](/docs/skill) — what the agent does
-- [Sample report](/docs/sample-report) — a fictional notes page
-- [Sample comparison](/docs/sample-comparison) — the same page after a revision
-- [Report](/docs/report) — the shape of `report.md`
+A [sample report](/docs/sample-report). A [sample comparison](/docs/sample-comparison). The [report shape](/docs/report).
