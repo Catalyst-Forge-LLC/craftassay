@@ -20,31 +20,23 @@ const opt = {
 	shell: process.platform === "win32",
 };
 
-function cliName() {
-	for (const bin of ["localslip", "localberth"]) {
-		if (!spawnSync(bin, ["--help"], { ...opt, stdio: "ignore" }).error) return bin;
-	}
-	return null;
-}
-
-const bin = cliName();
-if (!bin) {
-	console.warn(`localslip: CLI not on PATH; FilePress will try port ${preferred}`);
-	console.log(preferred);
-	process.exit(0);
-}
-
 function getPort() {
-	const got = spawnSync(bin, ["get", name], { ...opt, stdio: ["ignore", "pipe", "pipe"] });
+	const got = spawnSync("localslip", ["get", name], { ...opt, stdio: ["ignore", "pipe", "pipe"] });
 	if (got.status !== 0) return null;
 	const port = String(got.stdout || "").trim();
 	return /^\d+$/.test(port) ? port : null;
 }
 
+if (spawnSync("localslip", ["--help"], { ...opt, stdio: "ignore" }).error) {
+	console.warn(`localslip: CLI not on PATH; FilePress will try port ${preferred}`);
+	console.log(preferred);
+	process.exit(0);
+}
+
 let port = getPort();
 if (!port) {
 	const claim = spawnSync(
-		bin,
+		"localslip",
 		["claim", name, "--port", preferred, "--or-next", "--notes", "FilePress"],
 		{ ...opt, stdio: ["ignore", "pipe", "pipe"] },
 	);
