@@ -68,7 +68,7 @@ test("public copy names the product and the landing example", () => {
 	assert.doesNotMatch(home, /Not Cold-eye/);
 	assert.doesNotMatch(home, /npm \*\*`craftassay`\*\*/);
 	assert.match(readme, /installable review skill/i);
-	assert.match(readme, /does not run an automatic scanner/);
+	assert.match(readme, /does not run an\s+automatic scanner/);
 	assert.doesNotMatch(home, /npx craftassay/);
 	const about = readFileSync(join(packageRoot, "site", "pages", "about.md"), "utf8");
 	assert.match(home, /An assay tests what something is made of/);
@@ -135,11 +135,15 @@ test("install and files pages name the hook and finish the redirects", () => {
 	assert.match(install, /Which agent do you use/);
 	assert.match(install, /## Cursor/);
 	assert.match(install, /## Claude Code/);
-	assert.match(install, /## Claude\.ai/);
-	assert.match(install, /Do not unzip/);
+	assert.match(install, /writable workspace is required/i);
+	assert.match(install, /report alone does not prove loading/i);
 	assert.match(install, /craftassay\.zip/);
 	assert.match(install, /Other installation methods/);
+	assert.match(install, /scorecard\.md/);
+	assert.match(install, /findings\.md/);
+	assert.match(install, /coverage\.md/);
 	assert.doesNotMatch(install, /missing from the package/);
+	assert.doesNotMatch(install, /## Claude\.ai/);
 	assert.ok(!existsSync(join(packageRoot, "site", "pages", "install.md")));
 	assert.ok(!existsSync(join(packageRoot, "site", "pages", "skill.md")));
 	const redirects = readFileSync(join(packageRoot, "site", "static", "_redirects"), "utf8");

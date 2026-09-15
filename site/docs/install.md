@@ -4,13 +4,23 @@ title: Get started
 
 Install the skill in your agent, then use it. You do not need Node or npm for this path. The package does not run an automatic scanner. The reviewing agent may inspect project files you point it at.
 
+CraftAssay writes four report files in a dated run folder. A writable workspace is required. Claude.ai without project files is not a supported first-use route.
+
+## Supported hosts
+
+| Host | Scope | Required | Notes |
+| --- | --- | --- | --- |
+| Cursor | Project skills folder | Writable workspace | Host listing / discovery not independently verified in this docs pass |
+| Claude Code | Project or `~/.claude/skills/` | Writable workspace | Same |
+| Other agents that read `SKILL.md` | Manual copy | Writable workspace | Unverified |
+| Claude.ai | — | Writable project files | Not a supported first-use route without files |
+
+A folder on disk is not proof the agent loaded the skill. Prefer the host’s skill list or a visible file-read of `SKILL.md`. A report alone does not prove loading.
+
 ## Which agent do you use?
 
 - [Cursor](#cursor)
 - [Claude Code](#claude-code)
-- [Claude.ai](#claudeai)
-
-A folder on disk is not proof the agent found the skill. The first run below is the check.
 
 ## Cursor
 
@@ -30,7 +40,7 @@ Put that folder in the project you are reviewing:
 
 ### Confirm it
 
-Ask Cursor to use CraftAssay on the sample below. If it writes a dated run folder with `report.md`, it found the skill and the reference files.
+If Cursor lists installed skills, confirm `craftassay`. Otherwise ask it to open `SKILL.md` from that folder and quote the first heading.
 
 ### Try it
 
@@ -48,19 +58,31 @@ automatically.
 
 Then ask:
 
-> Use CraftAssay on `harbor-note.md`. Follow the installed CraftAssay skill. Write the report.
+> Use CraftAssay on `harbor-note.md`. Follow the installed CraftAssay skill. Write the report. Leave the page unchanged.
+
+A URL or paste without a project directory uses `subject.craftassay/` per the skill’s output reference. Do not promise a HarborNote-named folder for pasted content you never saved as `harbor-note.md`.
 
 ### Find the result
 
-The run lands in `harbor-note.craftassay/<YYYY-MM-DD>/` next to the file. Open `report.md`.
+The run lands in `harbor-note.craftassay/<YYYY-MM-DD>/` next to the file. Open `report.md` first. A complete file-capable run also writes:
+
+- `report.md`
+- `scorecard.md`
+- `findings.md`
+- `coverage.md`
 
 Success looks like this shape, not identical wording or scores from every model:
 
-- Findings and scores, with NR where evidence is missing
-- The privacy claim against automatic sync named as a problem
+- The tension between “nothing leaves your machine” and “every device stays in sync automatically” is named
+- Missing explanation of how sync works stays open (NR where implementation evidence is absent)
+- No invented cloud, telemetry practice, or tested privacy failure
 - The page itself left unchanged
 
-A later pass with the earlier report attached becomes a comparison. It does not overwrite the earlier folder.
+An incomplete folder is not a fully successful run. That the example behaved is not the same check as discovery.
+
+### Second use (comparison)
+
+Attach an earlier run for the same subject. The next review goes to a new dated directory (with a numeric suffix when needed). Unrelated baselines must not silently become the comparison source. Changed inspection scope is reported so a score difference is not automatically a product improvement.
 
 ## Claude Code
 
@@ -78,45 +100,29 @@ Unzip, then put the folder in the repo you are reviewing:
 
 ### Confirm it
 
-Same check as Cursor: the first run must produce `report.md`.
+If Claude Code lists skills, confirm `craftassay`. Otherwise ask it to open `SKILL.md` from that folder and quote the first heading.
 
 ### Try it
 
-Same request as [Cursor](#try-it).
+Save `harbor-note.md` as in [Cursor](#try-it), then ask:
+
+> Use CraftAssay on `harbor-note.md`. Follow the installed CraftAssay skill. Write the report. Leave the page unchanged.
 
 ### Find the result
 
-Same path as [Cursor](#find-the-result).
-
-## Claude.ai
-
-### Get it
-
-Download [craftassay.zip](/skills/craftassay.zip).
-
-### Add it
-
-Do not unzip. Open Settings → Customize → Skills and upload the zip.
-
-### Confirm it
-
-Start a chat and run the request below. If the agent writes a CraftAssay report, it loaded the skill.
-
-### Try it
-
-Paste the HarborNote page from [Cursor](#try-it), then ask:
-
-> Use CraftAssay on this page. Follow the installed CraftAssay skill. Write the report.
-
-### Find the result
-
-The report appears in the chat. When the agent can write files, it lands in `harbor-note.craftassay/<YYYY-MM-DD>/report.md`.
+Open `harbor-note.craftassay/<YYYY-MM-DD>/report.md` and confirm the four files exist. Source unchanged. Look for the sync-vs-privacy tension without inventing a server.
 
 ## After the review
 
 There is no apply skill. Read the findings. Keep what works. Make the smallest useful correction yourself, or ask your agent to make that named edit outside this skill.
 
 The source stays unchanged until you do that.
+
+Cold-eye tests whether a newcomer can understand and use the subject. CraftAssay provides a broader dimensional assessment and repeatable comparison.
+
+### Update or remove
+
+Replace the installed `craftassay` folder to update. Delete that folder to uninstall. Copied skills do not refresh when you bump the npm package.
 
 ## Other ways to ask
 
@@ -149,6 +155,6 @@ Or clone the [repo](https://github.com/Catalyst-Forge-LLC/craftassay) and copy `
 - Cursor: `~/.cursor/skills/craftassay/`
 - Claude Code: `~/.claude/skills/craftassay/`
 
-Same folder shape. The first-run check is the same.
+Same folder shape. Discovery and first-use checks are the same.
 
 A [sample report](/docs/sample-report). A [sample comparison](/docs/sample-comparison).

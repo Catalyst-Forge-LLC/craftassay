@@ -23,7 +23,7 @@ A fictional notes page. The hero says nothing leaves the machine. The same page 
 | Overall appeal | 4 |
 
 **harbornote-F001** · P1 · claim-risk  
-"Nothing leaves your machine. Ever." sits above automatic sync to every laptop. Bound the privacy claim. Notes can still work without a network.
+"Nothing leaves your machine. Ever." sits above automatic sync to every laptop. Name the missing explanation and the tension between the claims. Invite the author to say how synchronization works and what leaves which device. Do not invent a server or a tested privacy failure. Notes can still work without a network.
 
 A later pass resolves that finding. Utility stays 6. Accuracy moves to 6 because the contradiction is gone.
 

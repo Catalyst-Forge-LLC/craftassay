@@ -18,23 +18,34 @@ HarborNote page —
 
 - [Cursor](https://craftassay.dev/docs/install#cursor)
 - [Claude Code](https://craftassay.dev/docs/install#claude-code)
-- [Claude.ai](https://craftassay.dev/docs/install#claudeai)
 
 **Site:** [craftassay.dev](https://craftassay.dev)
 
 ## First run
 
-Save a short page that says nothing leaves the machine and also
-promises automatic sync, then ask:
+Save this page as `harbor-note.md`, then ask:
 
 > Use CraftAssay on `harbor-note.md`. Follow the installed CraftAssay
-> skill. Write the report.
+> skill. Write the report. Leave the page unchanged.
 
-The run lands in `harbor-note.craftassay/<YYYY-MM-DD>/`. The page
-should be unchanged. The report should name the privacy contradiction.
+```markdown
+# HarborNote
 
-The package does not run an automatic scanner. The reviewing agent
-may inspect project files you point it at. v1 has no CLI.
+Nothing leaves your machine. Ever.
+
+HarborNote is the notes app for people who are tired of clouds.
+Install it, type, and you are done. Every device stays in sync
+automatically.
+```
+
+The run lands in `harbor-note.craftassay/<YYYY-MM-DD>/` with
+`report.md`, `scorecard.md`, `findings.md`, and `coverage.md`. The
+page should be unchanged. The report should name the sync-vs-privacy
+tension without inventing a cloud architecture.
+
+A writable workspace is required. The package does not run an
+automatic scanner. The reviewing agent may inspect project files you
+point it at. v1 has no CLI.
 
 ## Other installation methods
 
