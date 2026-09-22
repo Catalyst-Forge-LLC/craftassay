@@ -6,7 +6,7 @@ An assay tests what something is made of, and how good it is. **CraftAssay** is 
 
 An agent reads the skill and writes a report with findings, scores, and evidence that can be compared later.
 
-**[Get started](/docs/install)** — install the skill in your agent, then use it.
+**[Get started](/docs/install)**: install the skill in your agent, then use it.
 
 It scores usefulness, clarity, quality, and presentation. It is not a certification. It is not release approval.
 
@@ -28,7 +28,7 @@ It scores usefulness, clarity, quality, and presentation. It is not a certificat
 | **Aesthetics** | Does the inspected presentation help or hinder? |
 | **Overall appeal** | Would the stated audience want to try it? |
 
-Use NR when evidence is missing. Do not invent an aesthetic score for an uninspected interface.
+Each dimension gets a whole number from 1 to 10, where higher is better. NR means not rated, because the evidence was too thin to score. An interface nobody inspected gets NR for Aesthetics, not a guess.
 
 ## CraftAssay and Cold-eye
 

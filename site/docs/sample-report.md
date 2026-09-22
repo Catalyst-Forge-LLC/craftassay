@@ -4,6 +4,8 @@ title: Sample report
 
 Complete four-file output from [`fixtures/harbor-note/expected/2026-09-11/`](https://github.com/Catalyst-Forge-LLC/craftassay/tree/main/fixtures/harbor-note/expected/2026-09-11). Subject: [`input.md`](https://github.com/Catalyst-Forge-LLC/craftassay/blob/main/fixtures/harbor-note/input.md). A fictional notes page. A later pass of the same subject is the [sample comparison](/docs/sample-comparison).
 
+Scores run from 1 to 10, and higher is better. NR means not rated, because the evidence was too thin to score.
+
 # report.md
 
 # CraftAssay Review: HarborNote

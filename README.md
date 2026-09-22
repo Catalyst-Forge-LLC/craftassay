@@ -13,7 +13,7 @@ findings and scores that can be compared across revisions.
 The report is an assessment, not a certification.
 
 **Get started:** pick the agent, install the skill, then run the
-HarborNote page —
+HarborNote page. Instructions are at
 [craftassay.dev/docs/install](https://craftassay.dev/docs/install).
 
 - [Cursor](https://craftassay.dev/docs/install#cursor)
@@ -40,7 +40,9 @@ automatically.
 
 The run lands in `harbor-note.craftassay/<YYYY-MM-DD>/` with
 `report.md`, `scorecard.md`, `findings.md`, and `coverage.md`. The
-page should be unchanged. The report should name the sync-vs-privacy
+scorecard rates seven dimensions from 1 to 10, where higher is
+better. NR means not rated, because the evidence was too thin to
+score. The page should be unchanged. The report should name the sync-vs-privacy
 tension without inventing a cloud architecture.
 
 A writable workspace is required. The package does not run an

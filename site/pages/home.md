@@ -22,10 +22,14 @@ A fictional notes page. The hero says nothing leaves the machine. The same page 
 | Aesthetics | NR |
 | Overall appeal | 4 |
 
-**harbornote-F001** · P1 · claim-risk  
-"Nothing leaves your machine. Ever." sits above automatic sync to every laptop. Name the missing explanation and the tension between the claims. Invite the author to say how synchronization works and what leaves which device. Do not invent a server or a tested privacy failure. Notes can still work without a network.
+Scores run from 1 to 10, and higher is better: 3 is weak, 5 mixed, 7 solid, 9 excellent. NR means not rated, because the evidence was too thin to score that dimension. Here nobody compared other notes apps or looked at a rendered interface.
 
-A later pass resolves that finding. Utility stays 6. Accuracy moves to 6 because the contradiction is gone.
+**harbornote-F001** · P1 · claim-risk  
+"Nothing leaves your machine. Ever." sits above "Syncs to every laptop you own." A privacy-seeking user cannot tell what stays local. Recommended change: name which data stays on the machine when sync is off.
+
+P1 is the highest of three priorities. Claim-risk means the wording promises more than the page supports.
+
+A later pass reviews the revised page, which says notes stay on the device unless you turn on sync. That finding is marked resolved. Utility stays 6. Accuracy moves to 6 because the contradiction is gone.
 
 [Install in your agent](/docs/install) · [HarborNote review](/docs/sample-report) · [Then the comparison](/docs/sample-comparison)
 
@@ -41,7 +45,7 @@ A later pass resolves that finding. Utility stays 6. Accuracy moves to 6 because
 | --- | --- |
 | **Review** | Inspect, assess, score, and recommend |
 | **Findings** | Specific issues with evidence and the smallest useful correction |
-| **Scores** | Seven dimensions, or NR when evidence is missing |
+| **Scores** | Seven dimensions from 1 to 10, or NR (not rated) when evidence is missing |
 | **Evidence** | What was inspected, and what was not |
 | **Compare versions** | Finding status and explained score changes |
 
