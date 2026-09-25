@@ -8,6 +8,11 @@ An installable review skill for AI agents. An assay tests what something is made
 
 An agent reads the skill and writes the report. The skill does not edit the source. Run it again later to compare this review with the last one. The report is an assessment, not a certification.
 
+<div class="cta-row">
+  <a class="cta cta-primary" href="/docs/install">Install in your agent</a>
+  <a class="cta cta-secondary" href="https://github.com/Catalyst-Forge-LLC/craftassay">View on GitHub</a>
+</div>
+
 ## See a sample review
 
 A useful finding names the surface, shows the evidence, explains the consequence, and gives a change you can check.

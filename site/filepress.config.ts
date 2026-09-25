@@ -8,6 +8,7 @@ export default defineFilepressConfig({
 	description:
 		"An installable review skill for AI agents. Evidence-backed reviews of usefulness, clarity, quality, and presentation.",
 	tagline: "What works, what creates friction, and what to improve first.",
+	lede: 'Skill · usefulness · clarity',
 	url: "https://craftassay.dev",
 	author: "Catalyst Forge LLC",
 	logo: "/logo.png",
