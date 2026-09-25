@@ -2,7 +2,9 @@
 title: Get started
 ---
 
-Install the skill in your agent, then use it. You do not need Node or npm for this path. The package does not run an automatic scanner. The reviewing agent may inspect project files you point it at.
+First run: choose the target and scope, run CraftAssay, and read `report.md`. Later: supply the earlier run and identify what changed. If no comparable baseline exists, report a fresh assessment.
+
+Install the skill in your agent, then use it. You do not need Node or npm for this path. The package does not run an automatic scanner. The reviewing agent may inspect project files you point it at. The first run does not require a baseline.
 
 CraftAssay writes four report files in a dated run folder. A writable workspace is required. Claude.ai without project files is not a supported first-use route.
 

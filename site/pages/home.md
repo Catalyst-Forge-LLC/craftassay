@@ -10,6 +10,8 @@ An agent reads the skill and writes the report. The skill does not edit the sour
 
 ## See a sample review
 
+A useful finding names the surface, shows the evidence, explains the consequence, and gives a change you can check.
+
 A fictional notes page. The hero says nothing leaves the machine. The same page promises automatic sync.
 
 | Dimension | Score |

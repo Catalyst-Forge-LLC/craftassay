@@ -23,6 +23,8 @@ HarborNote page. Instructions are at
 
 ## First run
 
+First run: choose the target and scope, run CraftAssay, and read `report.md`. Later: supply the earlier run and identify what changed. If no comparable baseline exists, report a fresh assessment.
+
 Save this page as `harbor-note.md`, then ask:
 
 > Use CraftAssay on `harbor-note.md`. Follow the installed CraftAssay
