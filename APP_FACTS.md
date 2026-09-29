@@ -1,6 +1,6 @@
 ---
 app_facts_version: 0.1.0
-name: craftassay
+name: CraftAssay
 type: web app
 status: active
 license: MIT
@@ -25,7 +25,7 @@ credits:
   built_by: "Catalyst Forge — https://www.catalystforge.com/"
 ---
 
-# craftassay
+# CraftAssay
 
 `web app` · **active** · MIT
 
@@ -56,4 +56,4 @@ _None listed_
 ---
 *Generated with [AppFacts](https://appfacts.dev) · Built by [Catalyst Forge](https://www.catalystforge.com/) · [Visual label][appfacts-label]*
 
-[appfacts-label]: https://appfacts.dev/v#af1.eNpNkEFLxDAQhf9KeYc9pS1ec10QlNWL3kRkmozduG0SOtNqWfa_S7aIe5yZj_c-5owF9s4g0siwcBN9KonQCgNdc9l9c1dRzjAQJZ0FFuQ0LAyDITiOUqinh9eNcCfYMwaK_Ux9uTzSQi9uCllhMM1Rw7XqOXluvqT0pDSE2MMixzziYuA5C-zbu0E3h8GXwEzuRD1_jBSp5-kPNlAWhYWKq3a7KibPVV2XZeWDaBui55-mzFuZS2MOQxG4RleymV0MjmnkvCkfVbPYtv1_R-N5KfqckwRN03pD9UGPc9e4NLZ7UhpW0fo-TT3Xh8P-JgOXX4mZe8w
+[appfacts-label]: https://appfacts.dev/v#af1.eNpNkMFqwzAQRH_FzCEn2aZX3Uqg0JL20t5KKRtp66ixJeFduzXB_14UU8hxZ4eZx1www94ZRBoYFvuRvvRehBYY6JKL9sPHinKGgSjpJLAgp2FmGPTBcZTien582xzuDHtBT7GbqCufJ5rp1Y0hKwzGKWq4Vr0kz823lJ6U-hA7WOSYB6wGnrPAvn8YHKfQ-xKYyZ2p48-BInU8_psNlEVhoeKq3a6KyXNV10WsfBBtQ_T825R7K3NpyKEvANfoSjay1eCUBs4b8kk1i21bV-agMkfjeS74nJMETeNy4-qCnqZj49LQ7kmpX0TrhzR2XB8O-5sMrH8yeXuM
