@@ -44,6 +44,7 @@ credits:
 ---
 
 # Skill Facts - CraftAssay
+
 | | |
 |---|---|
 | **Developer** | Catalyst Forge |
