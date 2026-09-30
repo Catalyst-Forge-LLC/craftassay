@@ -4,7 +4,7 @@ name: CraftAssay
 type: web app
 status: active
 license: MIT
-version: 0.1.15
+version: 0.1.16
 homepage: https://craftassay.dev
 repository: https://github.com/Catalyst-Forge-LLC/craftassay
 stack:
