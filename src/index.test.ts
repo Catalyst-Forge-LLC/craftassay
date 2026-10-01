@@ -55,7 +55,9 @@ test("public copy names the product and the landing example", () => {
 	const readme = readFileSync(join(packageRoot, "README.md"), "utf8");
 	const filepress = readFileSync(join(packageRoot, "site", "filepress.config.ts"), "utf8");
 	assert.match(filepress, /What works, what creates friction, and what to improve first/);
-	assert.match(home, /title: See your work with fresh eyes/);
+	assert.match(home, /title: Score your work with evidence, then see what the next revision changed./);
+	assert.doesNotMatch(home, /fresh eyes/i);
+	assert.equal(existsSync(join(packageRoot, "site.misemphasis")), false);
 	assert.doesNotMatch(home, /title: What works, what creates friction/);
 	assert.match(home, /## See a sample review/);
 	assert.match(home, /nothing leaves the machine/);

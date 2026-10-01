@@ -1,5 +1,5 @@
 ---
-title: See your work with fresh eyes.
+title: Score your work with evidence, then see what the next revision changed.
 description: An installable review skill for AI agents. Evidence-backed reviews of usefulness, clarity, quality, and presentation.
 order: 0
 ---
