@@ -33,7 +33,7 @@ craftassay/
   skills/craftassay/   Review + comparison pass
   site/                FilePress pages, docs, static
   docs/                PHASE_1_BRIEF
-  craftassay-review-spec-v1.1.md
+  craftassay-review-spec-v1.2.md
   .forgetrail/         lifecycle tracking
 ```
 
@@ -45,7 +45,7 @@ Deliverable directory: `<stem>.craftassay/<YYYY-MM-DD>/` (or `-2` on the same da
 
 - **Product: npm + FilePress site + skill.** WHY: sibling shelf. DECIDED: Phase 1
 - **Skill is the product. No CLI.** WHY: the report is agent behavior. DECIDED: Phase 1
-- **Spec v1.1 / rubric v1.0 is the contract.** WHY: the written method already exists. DECIDED: Phase 1
+- **Spec v1.2 / rubric v1.1 is the contract.** WHY: the written method already exists. DECIDED: Phase 1
 - **No accounts, no PocketBase, no project LLM key.** WHY: the subject and the report are the state. DECIDED: Phase 1
 - **TypeScript ESM catalog, not a pipeline.** WHY: house language and sibling parity. DECIDED: Phase 1
 - **One skill for review and comparison.** WHY: spec §12. Cold-eye stays optional. DECIDED: Phase 1

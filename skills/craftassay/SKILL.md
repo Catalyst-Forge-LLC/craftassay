@@ -30,9 +30,9 @@ sense when it earns its keep. Do not split the product name. Do
 not tell the reader they can skip a word in it. Do not lecture
 them on how to capitalize it.
 
-The contract is Review and Comparison Specification v1.1, scoring
-rubric v1.0. If a full spec file is in the repo
-(`craftassay-review-spec-v1.1.md`), read it when a rule here is
+The contract is Review and Comparison Specification v1.2, scoring
+rubric v1.1. If a full spec file is in the repo
+(`craftassay-review-spec-v1.2.md`), read it when a rule here is
 thin. These reference files win for the report shape you emit.
 
 ## Review workflow
@@ -48,7 +48,9 @@ thin. These reference files win for the report shape you emit.
    to compare different subjects is allowed.
 3. Choose a **new run folder**. Never write into a folder that
    already has `report.md`. Never overwrite a supplied baseline.
-4. Follow `references/coverage.md`. Record what you inspected.
+4. Follow `references/coverage.md`. For discovery surfaces, use
+   `references/value-clarity.md` before internal specifications.
+   Record what you inspected.
    Stop once the evidence is enough for the stated depth.
 5. Write the deliverables using `references/report.md`.
    Create the run folder if needed. If a matching baseline exists,
@@ -119,4 +121,5 @@ check is clear. That is what `verify-first` is for.
 - `references/dimensions.md` — before you assign scores.
 - `references/findings.md` — before you emit a finding.
 - `references/coverage.md` — before you claim what was checked.
+- `references/value-clarity.md` — when reviewing a discovery surface.
 - `references/comparison.md` — when a baseline review exists.

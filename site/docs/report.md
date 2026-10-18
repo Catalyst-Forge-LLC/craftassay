@@ -17,4 +17,6 @@ Every material finding has an id, a classification, a surface, evidence, a conse
 
 Scores are whole numbers from 1 to 10, or NR. Accuracy is not a runtime bug rate. A clean review is allowed.
 
-The full contract is [specification v1.1](https://github.com/Catalyst-Forge-LLC/craftassay/blob/main/craftassay-review-spec-v1.1.md), rubric v1.0.
+The report includes **Value as presented**: who the page speaks to, what result it promises, why that result matters, and how to begin. Coverage records the public evidence before internal specifications. A weak explanation does not establish a useless product.
+
+The full contract is [specification v1.2](https://github.com/Catalyst-Forge-LLC/craftassay/blob/main/craftassay-review-spec-v1.2.md), rubric v1.1.

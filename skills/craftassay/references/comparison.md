@@ -39,3 +39,10 @@ count. Judge whether the underlying user problem was addressed.
 
 A name change alone must never change a score or imply that a
 finding was resolved.
+
+Specification v1.2 / rubric v1.1 adds an explicit value-as-presented check.
+For older baselines, disclose this methodology change and whether equivalent
+public evidence was inspected. Preserve old scores. Attribute changes to
+product evidence, presentation changes, or method changes as supported. If
+these cannot be separated, state that limitation instead of claiming a
+measured improvement. The numerical anchors and seven dimensions remain.

@@ -4,7 +4,9 @@
 
 Adapt depth to the subject. Do not skip the start.
 
-1. Read the catalog or landing surface as a newcomer.
+1. Read the catalog or landing surface as a newcomer. Apply
+   `value-clarity.md` before internal specifications. Keep the seven
+   answers, status, source, and reader consequence in `coverage.md`.
 2. Enumerate every in-scope project or included page.
 3. Read each card or primary description completely.
 4. Follow the primary public destination.

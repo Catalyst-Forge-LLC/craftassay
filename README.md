@@ -6,11 +6,14 @@
 
 An installable review skill for AI agents.
 
-An assay tests what something is made of, and how good it is.
-CraftAssay does that for a tool, a site, or a page. It writes
-findings and scores that can be compared across revisions.
+Know what to improve first. Give your agent a tool, page, or portfolio.
+CraftAssay checks whether its value comes across, weighs the evidence, and
+ranks useful improvements. Findings and scores can be compared across revisions.
 
-The report is an assessment, not a certification.
+The report is an assessment, not a certification. It also checks whether a
+newcomer can tell who the tool is for, why its result matters, and how to start.
+The current method is specification v1.2, rubric v1.1. Earlier sample reviews
+retain their original versions.
 
 **Get started:** pick the agent, install the skill, then run the
 HarborNote page. Instructions are at

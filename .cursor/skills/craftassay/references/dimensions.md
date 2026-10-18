@@ -35,3 +35,12 @@ Overall appeal is not the average of the other six.
 
 Uniqueness is not a proxy for usefulness. Clarity is comprehension.
 Aesthetics is the effectiveness of the visual presentation.
+
+## Rubric v1.1
+
+The seven dimensions and numerical anchors are unchanged. The value-as-presented
+check in `value-clarity.md` makes the evidence used for Utility, Clarity,
+Aesthetics, and Accuracy explicit. Distinguish product usefulness from its
+explanation, and reference one finding across affected dimensions without
+counting it as several defects. This evidence procedure is a methodology
+change when comparing against rubric v1.0.

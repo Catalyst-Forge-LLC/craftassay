@@ -1,21 +1,14 @@
 ---
-title: Score your work with evidence, then see what the next revision changed.
-description: An installable review skill for AI agents. Evidence-backed reviews of usefulness, clarity, quality, and presentation.
+title: "Know what to improve first."
+description: "Give your agent a tool, page, or portfolio. CraftAssay checks whether its value comes across, weighs the evidence, and ranks useful improvements. A later review shows what changed."
 order: 0
 ---
 
-An installable review skill for AI agents. An assay tests what something is made of, and how good it is. CraftAssay does that for a tool, a site, or a page: usefulness, clarity, quality, and presentation.
-
-An agent reads the skill and writes the report. The skill does not edit the source. Run it again later to compare this review with the last one. The report is an assessment, not a certification.
-
-<div class="cta-row">
-  <a class="cta cta-primary" href="/docs/install">Install in your agent</a>
-  <a class="cta cta-secondary" href="https://github.com/Catalyst-Forge-LLC/craftassay">View on GitHub</a>
-</div>
+<section class="value-hero" aria-label="CraftAssay overview"><div class="value-intro"><p class="value-kind">Review and comparison skill for your AI agent</p><h1>Know what to improve first.</h1><p class="value-lede">Give your agent a tool, page, or portfolio. CraftAssay checks whether its value comes across, weighs the evidence, and ranks useful improvements. A later review shows what changed.</p><div class="cta-row"><a class="cta cta-primary" href="/docs/install">Install CraftAssay</a><a class="cta cta-secondary" href="/docs/sample-report">Read a sample review</a></div><p class="value-limit">Four review files, seven dimensions. An assessment, not a certification. The source stays unchanged.</p></div><figure class="value-proof"><figcaption>Illustrative example</figcaption><p><strong>A fictional notes page promises</strong><br>“Nothing leaves your machine. Ever.”<br>“Syncs to every laptop you own.”</p><div class="value-result"><p><strong>P1 · claim-risk</strong><br>A privacy-seeking reader cannot tell what stays local.</p></div><p><strong>Recommended change</strong><br>Say which data stays on the device when sync is off.</p><p class="value-note">The next review checks the correction. Scores support the finding.</p></figure></section>
 
 ## See a sample review
 
-A useful finding names the surface, shows the evidence, explains the consequence, and gives a change you can check.
+An assay tests what something is made of, and how good it is. A useful finding names the surface, shows the evidence, explains the consequence, and gives a change you can check.
 
 A fictional notes page. The hero says nothing leaves the machine. The same page promises automatic sync.
 

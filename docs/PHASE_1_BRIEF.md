@@ -1,6 +1,6 @@
 # CraftAssay — Phase 1 architecture brief
 
-Canonical review contract: [`../craftassay-review-spec-v1.1.md`](../craftassay-review-spec-v1.1.md). This file is the stack and repo shape. If they drift on review behavior, the spec wins.
+Current review contract: [`../craftassay-review-spec-v1.2.md`](../craftassay-review-spec-v1.2.md), approved 2026-10-18. The v1.1 decisions below record the original planning baseline. This file is the stack and repo shape. If they drift on review behavior, the spec wins.
 
 **Status:** locked  
 **Last updated:** 2026-09-11  
