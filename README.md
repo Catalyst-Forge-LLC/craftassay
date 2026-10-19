@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="site/static/logo.png" alt="CraftAssay" width="128" />
+  <img src="https://craftassay.dev/logo.png" alt="CraftAssay" width="128" />
 </p>
 
 # CraftAssay
@@ -49,6 +49,18 @@ scorecard rates seven dimensions from 1 to 10, where higher is
 better. NR means not rated, because the evidence was too thin to
 score. The page should be unchanged. The report should name the sync-vs-privacy
 tension without inventing a cloud architecture.
+
+### What you change after reading the report
+
+The [HarborNote sample review](https://craftassay.dev/docs/sample-report) makes the problem concrete:
+
+> **harbornote-F001 · P1 · claim-risk:** The privacy and sync claims conflict. A privacy-seeking reader cannot tell what stays local. Name which data stays on the machine when sync is off.
+
+The author changes the promise to:
+
+> Notes stay on this device unless you turn on sync.
+
+The [later comparison](https://craftassay.dev/docs/sample-comparison) marks `harbornote-F001 → resolved`. Accuracy moves from 3 to 6; Utility stays 6. Readers now see the choice between local notes and optional sync. These are fictional copy-review examples, not evidence of a privacy audit. CraftAssay reports the issue and checks the later revision; the author makes the edit.
 
 A writable workspace is required. The package does not run an
 automatic scanner. The reviewing agent may inspect project files you
