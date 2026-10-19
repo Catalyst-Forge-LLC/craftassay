@@ -59,10 +59,10 @@ test("public copy names the product and the landing example", () => {
 	assert.doesNotMatch(home, /fresh eyes/i);
 	assert.equal(existsSync(join(packageRoot, "site.misemphasis")), false);
 	assert.doesNotMatch(home, /title: What works, what creates friction/);
-	assert.match(home, /## See a sample review/);
-	assert.match(home, /nothing leaves the machine/);
+	assert.match(home, /see-a-sample-review/);
+	assert.match(home, /Nothing leaves your machine/);
 	assert.match(home, /CraftAssay and Cold-eye/);
-	assert.match(home, /Install in your agent/);
+	assert.match(home, /Install CraftAssay/);
 	assert.doesNotMatch(home, /pnpm add/);
 	assert.match(home, /Cold-eye/);
 	assert.match(home, /Smell Check/);
@@ -73,7 +73,7 @@ test("public copy names the product and the landing example", () => {
 	assert.match(readme, /does not run an\s+automatic scanner/);
 	assert.doesNotMatch(home, /npx craftassay/);
 	const about = readFileSync(join(packageRoot, "site", "pages", "about.md"), "utf8");
-	assert.match(home, /An assay tests what something is made of/);
+	assert.match(home, /Know what to improve first/);
 	assert.match(about, /An assay is a test of composition and quality/);
 	assert.match(about, /CraftAssay/);
 	assert.doesNotMatch(about, /capitalization/);
