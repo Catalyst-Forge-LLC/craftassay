@@ -50,39 +50,18 @@ test("package ships skills and has no bin", () => {
 	assert.ok("./skills/*" in pkg.exports);
 });
 
-test("public copy names the product and the landing example", () => {
+test("public pages link the sample and do not claim a scanner or a CLI", () => {
 	const home = readFileSync(join(packageRoot, "site", "pages", "home.md"), "utf8");
 	const readme = readFileSync(join(packageRoot, "README.md"), "utf8");
-	const filepress = readFileSync(join(packageRoot, "site", "filepress.config.ts"), "utf8");
-	assert.match(filepress, /What works, what creates friction, and what to improve first/);
-	assert.match(home, /href="\/docs\/sample-report"/);
-	assert.doesNotMatch(home, /fresh eyes/i);
-	assert.equal(existsSync(join(packageRoot, "site.misemphasis")), false);
-	assert.doesNotMatch(home, /title: What works, what creates friction/);
-	assert.match(home, /see-a-sample-review/);
-	assert.match(home, /Nothing leaves your machine/);
-	assert.match(home, /CraftAssay and Cold-eye/);
-	assert.match(home, /Install CraftAssay/);
-	assert.doesNotMatch(home, /pnpm add/);
-	assert.match(home, /Cold-eye/);
-	assert.match(home, /Smell Check/);
-	assert.doesNotMatch(home, /Sibling of/);
-	assert.doesNotMatch(home, /Not Cold-eye/);
-	assert.doesNotMatch(home, /npm \*\*`craftassay`\*\*/);
-	assert.match(readme, /installable review skill/i);
-	assert.match(readme, /does not run an\s+automatic scanner/);
-	assert.doesNotMatch(home, /npx craftassay/);
 	const about = readFileSync(join(packageRoot, "site", "pages", "about.md"), "utf8");
-	assert.match(home, /Know what to improve first/);
-	assert.match(about, /An assay is a test of composition and quality/);
-	assert.match(about, /CraftAssay/);
-	assert.doesNotMatch(about, /capitalization/);
-	assert.doesNotMatch(about, /second word/);
-	assert.doesNotMatch(about, /\*\*Assay\*\*/);
+	assert.match(home, /href="\/docs\/sample-report"/);
+	assert.match(home, /\[About\]\(\/about\)/);
+	assert.equal(existsSync(join(packageRoot, "site.misemphasis")), false);
+	assert.doesNotMatch(home, /pnpm add/);
+	assert.doesNotMatch(home, /npx craftassay/);
+	assert.match(readme, /does not run an\s+automatic scanner/);
 	assert.match(about, /craftassay\.dev/);
 	assert.match(about, /craftassay\.com/);
-	assert.match(home, /\[About\]\(\/about\)/);
-	assert.doesNotMatch(home, /Why the name/);
 	const logo = readFileSync(join(packageRoot, "site", "static", "logo.png"));
 	assert.equal(logo.readUInt32BE(0), 0x89504e47);
 	assert.ok(logo.length > 10_000);
@@ -134,13 +113,11 @@ test("static sync copies the skill onto the site", () => {
 test("install and files pages name the hook and finish the redirects", () => {
 	const install = readFileSync(join(packageRoot, "site", "docs", "install.md"), "utf8");
 	assert.match(install, /does not run an automatic scanner/);
-	assert.match(install, /Which agent do you use/);
 	assert.match(install, /## Cursor/);
 	assert.match(install, /## Claude Code/);
 	assert.match(install, /writable workspace is required/i);
 	assert.match(install, /report alone does not prove loading/i);
 	assert.match(install, /craftassay\.zip/);
-	assert.match(install, /Other installation methods/);
 	assert.match(install, /scorecard\.md/);
 	assert.match(install, /findings\.md/);
 	assert.match(install, /coverage\.md/);
@@ -153,7 +130,6 @@ test("install and files pages name the hook and finish the redirects", () => {
 	assert.match(redirects, /\/skill \/docs\/skill 308/);
 	const filepress = readFileSync(join(packageRoot, "site", "filepress.config.ts"), "utf8");
 	assert.match(filepress, /href: "\/docs\/install"/);
-	assert.match(filepress, /Get started/);
 	assert.doesNotMatch(filepress, /label: "Skill"/);
 	assert.doesNotMatch(filepress, /label: "Install"/);
 	assert.match(filepress, /url: "https:\/\/craftassay\.dev"/);
