@@ -2,7 +2,7 @@
 skill_facts_version: "0.1.0"
 name: CraftAssay
 developer: Catalyst Forge
-version: 0.1.20
+version: 0.1.21
 status: active
 license: MIT
 kind: cursor-skill
@@ -50,7 +50,7 @@ credits:
 | | |
 |---|---|
 | **Developer** | Catalyst Forge |
-| **Version** | 0.1.20 |
+| **Version** | 0.1.21 |
 | **Status** | active |
 | **License** | MIT |
 | **Kind** | cursor-skill |
