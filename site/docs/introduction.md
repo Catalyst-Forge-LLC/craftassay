@@ -4,7 +4,7 @@ title: What it does
 
 An assay tests what something is made of, and how good it is. **CraftAssay** is an installable review skill for AI agents. It does that for a tool, site, skill, specification, or related portfolio.
 
-An agent reads the skill and writes a report with findings, scores, and evidence that can be compared later.
+An agent reads the skill and writes a prioritized report with findings, scores, and evidence. After you revise the work, compare it with the earlier run to see which findings are resolved, which remain, and why scores changed.
 
 **[Get started](/docs/install)**: install the skill in your agent, then use it.
 

@@ -6,9 +6,9 @@
 
 An installable review skill for AI agents.
 
-Know what to improve first. Give your agent a tool, page, or portfolio.
-CraftAssay checks whether its value comes across, weighs the evidence, and
-ranks useful improvements. Findings and scores can be compared across revisions.
+**Find the improvements that matter. Check the revision.**
+
+Review how useful, clear, credible, and well-presented a tool, site, skill, or portfolio is. CraftAssay gives your agent a method for prioritizing improvements with evidence, then comparing a later revision to see what was resolved and what remains.
 
 The report is an assessment, not a certification. It also checks whether a
 newcomer can tell who the tool is for, why its result matters, and how to start.
@@ -47,8 +47,7 @@ The run lands in `harbor-note.craftassay/<YYYY-MM-DD>/` with
 `report.md`, `scorecard.md`, `findings.md`, and `coverage.md`. The
 scorecard rates seven dimensions from 1 to 10, where higher is
 better. NR means not rated, because the evidence was too thin to
-score. The page should be unchanged. The report should name the sync-vs-privacy
-tension without inventing a cloud architecture.
+score. The page should be unchanged. The report should explain why readers cannot tell whether their notes stay local. It assesses the page’s claims; it does not establish how the app implements sync.
 
 ### What you change after reading the report
 

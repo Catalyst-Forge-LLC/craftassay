@@ -1,10 +1,10 @@
 ---
-title: "Know what to improve first."
-description: "Give your agent a tool, page, or portfolio. CraftAssay checks whether its value comes across, weighs the evidence, and ranks useful improvements. A later review shows what changed."
+title: "Find the improvements that matter. Check the revision."
+description: "Review how useful, clear, credible, and well-presented a tool, site, skill, or portfolio is. CraftAssay gives your agent a method for prioritizing improvements with evidence, then comparing a later revision to see what was resolved and what remains."
 order: 0
 ---
 
-<section class="value-hero" aria-label="CraftAssay overview"><div class="value-intro"><div class="value-headline"><p class="value-kind">Review and comparison skill for your AI agent</p><h1>Know what to improve first.</h1></div><div class="value-pitch"><p class="value-lede">Give your agent a tool, page, or portfolio. CraftAssay checks whether its value comes across, weighs the evidence, and ranks useful improvements. A later review shows what changed.</p><div class="cta-row"><a class="cta cta-primary" href="/docs/install">Install CraftAssay</a><a class="cta cta-secondary" href="#see-a-sample-review">See the finding and correction</a></div><p class="value-limit">Four review files, seven dimensions. An assessment, not a certification. The source stays unchanged.</p></div></div>
+<section class="value-hero" aria-label="CraftAssay overview"><div class="value-intro"><div class="value-headline"><p class="value-kind">Review and comparison skill for your AI agent</p><h1>Find the improvements that matter. Check the revision.</h1></div><div class="value-pitch"><p class="value-lede">Review how useful, clear, credible, and well-presented a tool, site, skill, or portfolio is. CraftAssay gives your agent a method for prioritizing improvements with evidence, then comparing a later revision to see what was resolved and what remains.</p><div class="cta-row"><a class="cta cta-primary" href="/docs/install">Install CraftAssay</a><a class="cta cta-secondary" href="#see-a-sample-review">See the finding and correction</a></div><p class="value-limit">Four review files, seven dimensions. An assessment, not a certification. The source stays unchanged.</p></div></div>
 <figure class="value-proof worked-example" id="see-a-sample-review" tabindex="-1">
 <figcaption>Resolve a privacy promise that contradicts itself</figcaption>
 <p class="example-context">HarborNote is a fictional notes app. These excerpts connect its sample review, the author’s revised page, and the later comparison.</p>

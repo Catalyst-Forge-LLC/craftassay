@@ -5,7 +5,7 @@ const npm = "https://www.npmjs.com/package/craftassay";
 
 export default defineFilepressConfig({
 	title: "CraftAssay",
-	description: "Give your agent a tool, page, or portfolio. CraftAssay checks whether its value comes across, weighs the evidence, and ranks useful improvements. A later review shows what changed.",
+	description: "Review how useful, clear, credible, and well-presented a tool, site, skill, or portfolio is. CraftAssay gives your agent a method for prioritizing improvements with evidence, then comparing a later revision to see what was resolved and what remains.",
 	tagline: "What works, what creates friction, and what to improve first.",
 	lede: "Review and comparison skill for your AI agent",
 	url: "https://craftassay.dev",
